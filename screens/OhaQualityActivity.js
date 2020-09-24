@@ -40,7 +40,7 @@ class RadioButton extends Component {
     }
 }
 
-export default class QualityActivity extends React.Component {
+export default class OhaQualityActivity extends React.Component {
 
     constructor(props) {
         super(props)
@@ -1465,7 +1465,7 @@ export default class QualityActivity extends React.Component {
 
 
                                                                                                             this.resetRadioButtons();
-                                                                                                            this.props.navigation.navigate('QualityActivity')
+                                                                                                            this.props.navigation.navigate('OhaQualityActivity')
                                                                                                             Toast.showWithGravity('Success!! \nDetails Added Successfully.', Toast.LONG, Toast.CENTER);
                                                                                                             this.setState({ isLoading: false })
 
@@ -1513,7 +1513,7 @@ export default class QualityActivity extends React.Component {
                                                                                                             });
 
                                                                                                             this.resetRadioButtons();
-                                                                                                            this.props.navigation.navigate('QualityActivity')
+                                                                                                            this.props.navigation.navigate('OhaQualityActivity')
 
                                                                                                             Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
                                                                                                             this.setState({ isLoading: false })
@@ -1702,9 +1702,8 @@ export default class QualityActivity extends React.Component {
 
                         <DropDownPicker
                             items={[
-                                { label: 'Herman Fourie', value: 'Herman Fourie' },
-                                { label: 'Gerard Snyman', value: 'Gerard Snyman' },
-                                { label: 'Chris Norris', value: 'Chris Norris' },
+                                { label: 'Davinash Naicker', value: 'Davinash Naicker' },
+                                { label: 'Ravi Sarju', value: 'Ravi Sarju' },
                             ]}
                             placeholder="SELECT"
                             containerStyle={{ height: 50 }}
@@ -1735,12 +1734,10 @@ export default class QualityActivity extends React.Component {
 
                         <DropDownPicker
                             items={[
-                                { label: 'HAR 1', value: 'HAR 1' },
-                                { label: 'HAR 2', value: 'HAR 2' },
-                                { label: 'HAR 3', value: 'HAR 3' },
-                                { label: 'HAR 4', value: 'HAR 4' },
-                                { label: 'HAR 5', value: 'HAR 5' },
-                                { label: 'HAR 6', value: 'HAR 6' },
+                                { label: 'OHA 1',  value: 'OHA 1' },
+                                { label: 'OHA 2N', value: 'OHA 2N' },
+                                { label: 'OHA 2S', value: 'OHA 2S' },
+                                
                             ]}
                             placeholder="SELECT"
                             containerStyle={{ height: 50 }}

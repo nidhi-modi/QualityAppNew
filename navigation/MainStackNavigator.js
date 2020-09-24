@@ -7,7 +7,10 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 
 import SiteSelection from '../screens/SiteSelection'
-import QualityActivity from '../screens/QualityActivity'
+import HarQualityActivity from '../screens/HarQualityActivity'
+import GerQualityActivity from '../screens/GerQualityActivity'
+import FavQualityActivity from '../screens/FavQualityActivity'
+import OhaQualityActivity from '../screens/OhaQualityActivity'
 import ScreenNavigator from '../screens/ScreenNavigator'
 import CheckList from '../screens/CheckList'
 
@@ -48,7 +51,64 @@ function MainStackNavigator() {
 
                 <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ title: 'T&G Global' }} />
 
-                <Stack.Screen name='QualityActivity' component={QualityActivity} options={({ navigation }) => ({
+                <Stack.Screen name='HarQualityActivity' component={HarQualityActivity} options={({ navigation }) => ({
+                    headerRight: () =>
+                        <View style={{ margin: 5 }}>
+
+                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                onPress={() => navigation.navigate('CheckList')}>
+                                <Image source={require('../assets/menu32.png')}
+
+                                    style={styles.FloatingButtonStyle2} />
+
+                            </TouchableOpacity>
+
+                            <View style={{
+                                marginRight: 3
+                            }}></View>
+                        </View>
+                    , title: 'T&G Global', headerLeft: () => null
+                })} />
+
+                <Stack.Screen name='GerQualityActivity' component={GerQualityActivity} options={({ navigation }) => ({
+                    headerRight: () =>
+                        <View style={{ margin: 5 }}>
+
+                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                onPress={() => navigation.navigate('CheckList')}>
+                                <Image source={require('../assets/menu32.png')}
+
+                                    style={styles.FloatingButtonStyle2} />
+
+                            </TouchableOpacity>
+
+                            <View style={{
+                                marginRight: 3
+                            }}></View>
+                        </View>
+                    , title: 'T&G Global', headerLeft: () => null
+                })} />
+
+                <Stack.Screen name='FavQualityActivity' component={FavQualityActivity} options={({ navigation }) => ({
+                    headerRight: () =>
+                        <View style={{ margin: 5 }}>
+
+                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                onPress={() => navigation.navigate('CheckList')}>
+                                <Image source={require('../assets/menu32.png')}
+
+                                    style={styles.FloatingButtonStyle2} />
+
+                            </TouchableOpacity>
+
+                            <View style={{
+                                marginRight: 3
+                            }}></View>
+                        </View>
+                    , title: 'T&G Global', headerLeft: () => null
+                })} />
+
+                <Stack.Screen name='OhaQualityActivity' component={OhaQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
 

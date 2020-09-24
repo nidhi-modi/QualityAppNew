@@ -53,11 +53,11 @@ export default class CheckList extends Component {
                             keyExtractor={(item, index) => index.toString()}
                             renderItem={({ item }) => (
                                 <View style={{ backgroundColor: 'transparent', margin: 20 }}>
-                                    <Text style={styles.textStyling}>Auditor Name:      {item.auditor_name}</Text>
-                                    <Text style={styles.textStyling}>House Number:    {item.house_number}</Text>
-                                    <Text style={styles.textStyling}>Row Number:        {item.row_number}</Text>
-                                    <Text style={styles.textStyling}>Week Number:     {item.week_number}</Text>
-                                    {item.quality_percent <= 85 ? (<Text style={styles.textStyling}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStyling}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+                                    <Text style={styles.textStyling}>Auditor Name:       {item.auditor_name}</Text>
+                                    <Text style={styles.textStylingSpace}>House Number:    {item.house_number}</Text>
+                                    <Text style={styles.textStylingSpace}>Row Number:        {item.row_number}</Text>
+                                    <Text style={styles.textStylingSpace}>Week Number:      {item.week_number}</Text>
+                                    {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
                                 </View>
                             )}
                         />
@@ -118,6 +118,14 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontWeight: 'bold',
         
+    },
+
+    textStylingSpace: {
+
+        fontSize: 15,
+        color: '#000000',
+        fontWeight: 'bold',
+        marginTop: 5
     },
     container: {
         flex: 1,

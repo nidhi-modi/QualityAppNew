@@ -28,21 +28,21 @@ export default class SiteSelection extends React.Component {
 
         if (houseSelected === 'HAR') {
 
-          this.props.navigation.navigate('QualityActivity');
+          this.props.navigation.navigate('HarQualityActivity');
     
         } else if (houseSelected === 'GER') {
     
-          this.props.navigation.navigate('QualityActivity');
+          this.props.navigation.navigate('GerQualityActivity');
     
     
         } else if (houseSelected === 'OHA') {
     
-          this.props.navigation.navigate('QualityActivity');
+          this.props.navigation.navigate('OhaQualityActivity');
     
     
         } else if (houseSelected === 'FAV') {
     
-          this.props.navigation.navigate('QualityActivity');
+          this.props.navigation.navigate('FavQualityActivity');
     
         }else {
 
