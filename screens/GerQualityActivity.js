@@ -1412,255 +1412,255 @@ export default class GerQualityActivity extends React.Component {
                                                                                             if (deleafingOption3) {
                                                                                                 if (deleafingOption4) {*/
 
-        if (this.state.isItConnected === 'Online') {
+                                                                                                    if (this.state.isItConnected === 'Online') {
 
 
 
-            console.log("Connected to internet");
+                                                                                                        console.log("Connected to internet");
 
-            const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
-            const url = `${scriptUrl}?
-            callback=ctrlq&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&quality_percent=${that.state.qualityPercentage}`;
+                                                                                                        const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                                                                                                        const url = `${scriptUrl}?
+                                                                                                        callback=ctrlq&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&quality_percent=${that.state.qualityPercentage}`;
 
-            console.log("URL : " + url);
-            fetch(url, { mode: 'no-cors' }).then(
-                () => { console.log("Data Send"); },
-            );
-            realm.write(() => {
-                var ID =
-                    realm.objects('quality_sheet').sorted('entry_id', true).length > 0
-                        ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
-                            .entry_id + 1
-                        : 1;
-                realm.create('quality_sheet', {
-                    entry_id: ID,
-                    auditor_name: that.state.auditorsName,
-                    house_number: that.state.houseNumber,
-                    row_number: that.state.rowNumber,
-                    week_number: that.state.weekNumber,
-                    clipping_data1: that.state.clippingOption1,
-                    clipping_data2: that.state.clippingOption2,
-                    clipping_data3: that.state.clippingOption3,
-                    clipping_data4: that.state.clippingOption4,
-                    pruning_data1: that.state.pruningOption1,
-                    pruning_data2: that.state.pruningOption2,
-                    pruning_data3: that.state.pruningOption3,
-                    pruning_data4: that.state.pruningOption4,
-                    twisting_data1: that.state.twistingOption1,
-                    twisting_data2: that.state.twistingOption2,
-                    twisting_data3: that.state.twistingOption3,
-                    twisting_data4: that.state.twistingOption4,
-                    picking_data1: that.state.pickingOption1,
-                    picking_data2: that.state.pickingOption2,
-                    picking_data3: that.state.pickingOption3,
-                    picking_data4: that.state.pickingOption4,
-                    deleafing_data1: that.state.deleafingOption1,
-                    deleafing_data2: that.state.deleafingOption2,
-                    deleafing_data3: that.state.deleafingOption3,
-                    deleafing_data4: that.state.deleafingOption4,
-                    quality_percent: that.state.qualityPercentage,
-                    data_send: 'Y',
-                });
+                                                                                                        console.log("URL : " + url);
+                                                                                                        fetch(url, { mode: 'no-cors' }).then(
+                                                                                                            () => { console.log("Data Send"); },
+                                                                                                        );
+                                                                                                        realm.write(() => {
+                                                                                                            var ID =
+                                                                                                                realm.objects('quality_sheet').sorted('entry_id', true).length > 0
+                                                                                                                    ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
+                                                                                                                        .entry_id + 1
+                                                                                                                    : 1;
+                                                                                                            realm.create('quality_sheet', {
+                                                                                                                entry_id: ID,
+                                                                                                                auditor_name: that.state.auditorsName,
+                                                                                                                house_number: that.state.houseNumber,
+                                                                                                                row_number: that.state.rowNumber,
+                                                                                                                week_number: that.state.weekNumber,
+                                                                                                                clipping_data1: that.state.clippingOption1,
+                                                                                                                clipping_data2: that.state.clippingOption2,
+                                                                                                                clipping_data3: that.state.clippingOption3,
+                                                                                                                clipping_data4: that.state.clippingOption4,
+                                                                                                                pruning_data1: that.state.pruningOption1,
+                                                                                                                pruning_data2: that.state.pruningOption2,
+                                                                                                                pruning_data3: that.state.pruningOption3,
+                                                                                                                pruning_data4: that.state.pruningOption4,
+                                                                                                                twisting_data1: that.state.twistingOption1,
+                                                                                                                twisting_data2: that.state.twistingOption2,
+                                                                                                                twisting_data3: that.state.twistingOption3,
+                                                                                                                twisting_data4: that.state.twistingOption4,
+                                                                                                                picking_data1: that.state.pickingOption1,
+                                                                                                                picking_data2: that.state.pickingOption2,
+                                                                                                                picking_data3: that.state.pickingOption3,
+                                                                                                                picking_data4: that.state.pickingOption4,
+                                                                                                                deleafing_data1: that.state.deleafingOption1,
+                                                                                                                deleafing_data2: that.state.deleafingOption2,
+                                                                                                                deleafing_data3: that.state.deleafingOption3,
+                                                                                                                deleafing_data4: that.state.deleafingOption4,
+                                                                                                                quality_percent: that.state.qualityPercentage,
+                                                                                                                data_send: 'Y',
+                                                                                                            });
 
 
 
-                this.resetRadioButtons();
-                this.props.navigation.navigate('GerQualityActivity')
-                Toast.showWithGravity('Success!! \nDetails Added Successfully.', Toast.LONG, Toast.CENTER);
+                                                                                                            this.resetRadioButtons();
+                                                                                                            this.props.navigation.navigate('GerQualityActivity')
+                                                                                                            Toast.showWithGravity('Success!! \nDetails Added Successfully.', Toast.LONG, Toast.CENTER);
+                                                                                                            this.setState({ isLoading: false })
+
+                                                                                                        });
+
+
+                                                                                                    } else {
+
+                                                                                                        console.log("Not connected to internet");
+
+                                                                                                        realm.write(() => {
+                                                                                                            var ID =
+                                                                                                                realm.objects('quality_sheet').sorted('entry_id', true).length > 0
+                                                                                                                    ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
+                                                                                                                        .entry_id + 1
+                                                                                                                    : 1;
+                                                                                                            realm.create('quality_sheet', {
+                                                                                                                entry_id: ID,
+                                                                                                                auditor_name: that.state.auditorsName,
+                                                                                                                house_number: that.state.houseNumber,
+                                                                                                                row_number: that.state.rowNumber,
+                                                                                                                week_number: that.state.weekNumber,
+                                                                                                                clipping_data1: that.state.clippingOption1,
+                                                                                                                clipping_data2: that.state.clippingOption2,
+                                                                                                                clipping_data3: that.state.clippingOption3,
+                                                                                                                clipping_data4: that.state.clippingOption4,
+                                                                                                                pruning_data1: that.state.pruningOption1,
+                                                                                                                pruning_data2: that.state.pruningOption2,
+                                                                                                                pruning_data3: that.state.pruningOption3,
+                                                                                                                pruning_data4: that.state.pruningOption4,
+                                                                                                                twisting_data1: that.state.twistingOption1,
+                                                                                                                twisting_data2: that.state.twistingOption2,
+                                                                                                                twisting_data3: that.state.twistingOption3,
+                                                                                                                twisting_data4: that.state.twistingOption4,
+                                                                                                                picking_data1: that.state.pickingOption1,
+                                                                                                                picking_data2: that.state.pickingOption2,
+                                                                                                                picking_data3: that.state.pickingOption3,
+                                                                                                                picking_data4: that.state.pickingOption4,
+                                                                                                                deleafing_data1: that.state.deleafingOption1,
+                                                                                                                deleafing_data2: that.state.deleafingOption2,
+                                                                                                                deleafing_data3: that.state.deleafingOption3,
+                                                                                                                deleafing_data4: that.state.deleafingOption4,
+                                                                                                                quality_percent: that.state.qualityPercentage,
+                                                                                                                data_send: 'N',
+                                                                                                            });
+
+                                                                                                            this.resetRadioButtons();
+                                                                                                            this.props.navigation.navigate('GerQualityActivity')
+
+                                                                                                            Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
+                                                                                                            this.setState({ isLoading: false })
+
+
+
+                                                                                                        });
+
+
+                                                                                                    }
+
+
+
+
+
+
+
+
+                                                                                                /*} else {
+                                                                                                    this.setState({ isLoading: false })
+                                                                                                    alert('Choose one option from deleafing quality check 4')
+
+                                                                                                }
+
+                                                                                            } else {
+                                                                                                this.setState({ isLoading: false })
+                                                                                                alert('Choose one option from deleafing quality check 3')
+                                                                                            }
+
+                                                                                        } else {
+                                                                                            this.setState({ isLoading: false })
+                                                                                            alert('Choose one option from deleafing quality check 2')
+
+                                                                                        }
+
+                                                                                    } else {
+                                                                                        this.setState({ isLoading: false })
+                                                                                        alert('Choose one option from deleafing quality check 1')
+
+                                                                                    }
+
+                                                                                } else {
+                                                                                    this.setState({ isLoading: false })
+                                                                                    alert('Choose one option from picking quality check 4')
+                                                                                }
+
+                                                                            } else {
+                                                                                this.setState({ isLoading: false })
+                                                                                alert('Choose one option from picking quality check 3')
+
+                                                                            }
+
+                                                                        } else {
+                                                                            this.setState({ isLoading: false })
+                                                                            alert('Choose one option from picking quality check 2')
+                                                                        }
+
+                                                                    } else {
+                                                                        this.setState({ isLoading: false })
+                                                                        alert('Choose one option from picking quality check 1')
+
+                                                                    }
+                                                                } else {
+                                                                    this.setState({ isLoading: false })
+                                                                    alert('Choose one option from twisting quality check 4')
+
+                                                                }
+
+                                                            } else {
+                                                                this.setState({ isLoading: false })
+                                                                alert('Choose one option from twisting quality check 3')
+
+                                                            }
+
+                                                        } else {
+                                                            this.setState({ isLoading: false })
+                                                            alert('Choose one option from twisting quality check 2')
+
+                                                        }
+
+                                                    } else {
+                                                        this.setState({ isLoading: false })
+                                                        alert('Choose one option from twisting quality check 1')
+
+                                                    }
+                                                } else {
+                                                    this.setState({ isLoading: false })
+                                                    alert('Choose one option from pruning quality check 4')
+
+                                                }
+
+                                            } else {
+                                                this.setState({ isLoading: false })
+                                                alert('Choose one option from pruning quality check 3')
+                                            }
+
+                                        } else {
+                                            this.setState({ isLoading: false })
+                                            alert('Choose one option from pruning quality check 2')
+                                        }
+
+                                    } else {
+                                        this.setState({ isLoading: false })
+                                        alert('Choose one option from pruning quality check 1')
+                                    }
+
+                                } else {
+                                    this.setState({ isLoading: false })
+                                    alert('Choose one option from clipping quality check 4')
+
+                                }
+
+                            } else {
+                                this.setState({ isLoading: false })
+                                alert('Choose one option from pruning quality check 3')
+
+                            }
+
+                        } else {
+                            this.setState({ isLoading: false })
+                            alert('Choose one option from pruning quality check 2')
+
+                        }
+
+                    } else {
+                        this.setState({ isLoading: false })
+                        alert('Choose one option from pruning quality check 1')
+
+                    }
+
+                } else {
+                    this.setState({ isLoading: false })
+                    alert('Please fill row number')
+
+                }
+
+            } else {
                 this.setState({ isLoading: false })
+                alert('Please select house number')
 
-            });
-
+            }
 
         } else {
+            this.setState({ isLoading: false })
+            alert('Please select auditor name')
 
-            console.log("Not connected to internet");
-
-            realm.write(() => {
-                var ID =
-                    realm.objects('quality_sheet').sorted('entry_id', true).length > 0
-                        ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
-                            .entry_id + 1
-                        : 1;
-                realm.create('quality_sheet', {
-                    entry_id: ID,
-                    auditor_name: that.state.auditorsName,
-                    house_number: that.state.houseNumber,
-                    row_number: that.state.rowNumber,
-                    week_number: that.state.weekNumber,
-                    clipping_data1: that.state.clippingOption1,
-                    clipping_data2: that.state.clippingOption2,
-                    clipping_data3: that.state.clippingOption3,
-                    clipping_data4: that.state.clippingOption4,
-                    pruning_data1: that.state.pruningOption1,
-                    pruning_data2: that.state.pruningOption2,
-                    pruning_data3: that.state.pruningOption3,
-                    pruning_data4: that.state.pruningOption4,
-                    twisting_data1: that.state.twistingOption1,
-                    twisting_data2: that.state.twistingOption2,
-                    twisting_data3: that.state.twistingOption3,
-                    twisting_data4: that.state.twistingOption4,
-                    picking_data1: that.state.pickingOption1,
-                    picking_data2: that.state.pickingOption2,
-                    picking_data3: that.state.pickingOption3,
-                    picking_data4: that.state.pickingOption4,
-                    deleafing_data1: that.state.deleafingOption1,
-                    deleafing_data2: that.state.deleafingOption2,
-                    deleafing_data3: that.state.deleafingOption3,
-                    deleafing_data4: that.state.deleafingOption4,
-                    quality_percent: that.state.qualityPercentage,
-                    data_send: 'N',
-                });
-
-                this.resetRadioButtons();
-                this.props.navigation.navigate('GerQualityActivity')
-
-                Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
-                this.setState({ isLoading: false })
-
-
-
-            });
-
-
-        }
-
-
-
-
-
-
-
-
-        /* } else {
-             this.setState({ isLoading: false })
-             alert('Choose one option from deleafing quality check 4')
-
-         }
-
-     } else {
-         this.setState({ isLoading: false })
-         alert('Choose one option from deleafing quality check 3')
-     }
-
- } else {
-     this.setState({ isLoading: false })
-     alert('Choose one option from deleafing quality check 2')
-
- }
-
-} else {
- this.setState({ isLoading: false })
- alert('Choose one option from deleafing quality check 1')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from picking quality check 4')
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from picking quality check 3')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from picking quality check 2')
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from picking quality check 1')
-
-}
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from twisting quality check 4')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from twisting quality check 3')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from twisting quality check 2')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from twisting quality check 1')
-
-}
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 4')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 3')
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 2')
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 1')
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from clipping quality check 4')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 3')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 2')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Choose one option from pruning quality check 1')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Please fill row number')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Please select house number')
-
-}
-
-} else {
-this.setState({ isLoading: false })
-alert('Please select auditor name')
-
-}*/
+        }*/
 
     }
 
