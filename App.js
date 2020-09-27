@@ -64,6 +64,10 @@ export default class App extends Component {
                   deleafing_data2: 'string',
                   deleafing_data3: 'string',
                   deleafing_data4: 'string',
+                  dropping_data1: 'string',
+                  dropping_data2: 'string',
+                  dropping_data3: 'string',
+                  dropping_data4: 'string',
                   quality_percent: 'int',
                   data_send      : 'string',
 

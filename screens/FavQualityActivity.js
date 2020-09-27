@@ -1388,7 +1388,7 @@ export default class FavQualityActivity extends React.Component {
 
 
 
-        if (auditorsName) {
+        /*if (auditorsName) {
             if (houseNumber) {
                 if (rowNumber) {
                     if (clippingOption1) {
@@ -1410,7 +1410,7 @@ export default class FavQualityActivity extends React.Component {
                                                                                     if (deleafingOption1) {
                                                                                         if (deleafingOption2) {
                                                                                             if (deleafingOption3) {
-                                                                                                if (deleafingOption4) {
+                                                                                                if (deleafingOption4) {*/
 
                                                                                                     if (this.state.isItConnected === 'Online') {
 
@@ -1532,7 +1532,7 @@ export default class FavQualityActivity extends React.Component {
 
 
 
-                                                                                                } else {
+                                                                                               /* } else {
                                                                                                     this.setState({ isLoading: false })
                                                                                                     alert('Choose one option from deleafing quality check 4')
 
@@ -1660,7 +1660,7 @@ export default class FavQualityActivity extends React.Component {
             this.setState({ isLoading: false })
             alert('Please select auditor name')
 
-        }
+        }*/
 
     }
 
@@ -1738,7 +1738,7 @@ export default class FavQualityActivity extends React.Component {
                                 { label: 'FAV 2', value: 'FAV 2' },
                                 { label: 'FAV 3', value: 'FAV 3' },
                                 { label: 'FAV 4', value: 'FAV 4' },
-                                
+
                             ]}
                             placeholder="SELECT"
                             containerStyle={{ height: 50 }}
@@ -2168,6 +2168,86 @@ export default class FavQualityActivity extends React.Component {
                                 this.state.radioDeleafingItems4.map((item, key) =>
                                     (
                                         <RadioButton key={key} button={item} onClick={this.changeActiveRadioDeleafingButton4.bind(this, key)} />
+                                    ))
+                            }
+
+
+
+                        </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.text}>DROPPING</Text>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.titleHeading2Text}>1) Spacing: heads levelled and vines going down are spaced <Text style={styles.redColor}>(0)</Text> </Text>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <View style={styles.flexDirection}>
+
+                            {
+                                this.state.radioDroppingItems1.map((item, key) =>
+                                    (
+                                        <RadioButton key={key} button={item} onClick={this.changeActiveRadioDroppingButton1.bind(this, key)} />
+                                    ))
+                            }
+
+
+                        </View>
+
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.titleHeading2Text}>2) Angle is correct - drop and shift the same - Cubes not ripped <Text style={styles.redColor}>(3 each)</Text> </Text>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <View style={styles.flexDirection}>
+
+                            {
+                                this.state.radioDroppingItems2.map((item, key) =>
+                                    (
+                                        <RadioButton key={key} button={item} onClick={this.changeActiveRadioDroppingButton2.bind(this, key)} />
+                                    ))
+                            }
+
+
+
+                        </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.titleHeading2Text}>3) Stems on the hoops, turning around properly <Text style={styles.redColor}>(0)</Text> </Text>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <View style={styles.flexDirection}>
+
+                            {
+                                this.state.radioDroppingItems3.map((item, key) =>
+                                    (
+                                        <RadioButton key={key} button={item} onClick={this.changeActiveRadioDroppingButton3.bind(this, key)} />
+                                    ))
+                            }
+
+
+
+                        </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.titleHeading2Text}>4) Minimize floor fruit and broken trusses <Text style={styles.redColor}>(3 each)</Text> </Text>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <View style={styles.flexDirection}>
+
+                            {
+                                this.state.radioDroppingItems4.map((item, key) =>
+                                    (
+                                        <RadioButton key={key} button={item} onClick={this.changeActiveRadioDroppingButton4.bind(this, key)} />
                                     ))
                             }
 
