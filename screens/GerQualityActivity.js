@@ -1750,7 +1750,7 @@ export default class GerQualityActivity extends React.Component {
 
                                 // The solution: Apply zIndex to any device except Android
                                 ...(Platform.OS !== 'android' && {
-                                    zIndex: 20
+                                    zIndex: 10
                                 })
 
                             }}
