@@ -1700,31 +1700,44 @@ export default class GerQualityActivity extends React.Component {
 
                         <View style={styles.marginDimension}></View>
 
-                        <DropDownPicker
-                            items={[
-                                { label: 'Francis Dee', value: 'Francis Dee' },
-                                { label: 'Nilesh Patel', value: 'Nilesh Patel' },
-                            ]}
-                            placeholder="SELECT"
-                            containerStyle={{ height: 50 }}
+                        <View
                             style={{
-                                backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
-                                borderWidth: 1
-                            }}
-                            itemStyle={{
-                                justifyContent: 'flex-start'
-                            }}
-                            labelStyle={{
-                                fontSize: 15,
-                                textAlign: 'left',
-                                color: '#000000'
-                            }}
-                            dropDownStyle={{ backgroundColor: '#fafafa' }}
-                            onChangeItem={item => this.setState({
-                                auditorsName: item.value
-                            })}
-                        />
 
+                                // The solution: Apply zIndex to any device except Android
+                                ...(Platform.OS !== 'android' && {
+                                    zIndex: 20
+                                })
+
+                            }}
+                        >
+
+                            <DropDownPicker
+                                items={[
+                                    { label: 'Francis Dee', value: 'Francis Dee' },
+                                    { label: 'Nilesh Patel', value: 'Nilesh Patel' },
+                                ]}
+                                placeholder="SELECT"
+                                containerStyle={{ height: 50 }}
+                                style={{
+                                    backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
+                                    borderWidth: 1
+                                }}
+                                itemStyle={{
+                                    justifyContent: 'flex-start'
+                                }}
+                                labelStyle={{
+                                    fontSize: 15,
+                                    textAlign: 'left',
+                                    color: '#000000'
+                                }}
+                                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                onChangeItem={item => this.setState({
+                                    auditorsName: item.value
+                                })}
+                            />
+
+
+                        </View>
 
                         <View style={styles.inBtnmarginDimension}></View>
 
@@ -1732,34 +1745,44 @@ export default class GerQualityActivity extends React.Component {
 
                         <View style={styles.marginDimension}></View>
 
-                        <DropDownPicker
-                            items={[
-                                { label: 'GER 1', value: 'GER 1' },
-                                { label: 'GER 2', value: 'GER 2' },
-                                { label: 'GER 3', value: 'GER 3' },
-                                { label: 'GER 4', value: 'GER 4' },
-                                { label: 'GER 5', value: 'GER 5' },
-                            ]}
-                            placeholder="SELECT"
-                            containerStyle={{ height: 50 }}
+                        <View
                             style={{
-                                backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
-                                borderWidth: 1
-                            }}
-                            itemStyle={{
-                                justifyContent: 'flex-start'
-                            }}
-                            labelStyle={{
-                                fontSize: 15,
-                                textAlign: 'left',
-                                color: '#000000'
-                            }}
-                            dropDownStyle={{ backgroundColor: '#fafafa' }}
-                            onChangeItem={item => this.setState({
-                                houseNumber: item.value
-                            })}
-                        />
 
+                                // The solution: Apply zIndex to any device except Android
+                                ...(Platform.OS !== 'android' && {
+                                    zIndex: 20
+                                })
+
+                            }}
+                        >
+                            <DropDownPicker
+                                items={[
+                                    { label: 'GER 1', value: 'GER 1' },
+                                    { label: 'GER 2', value: 'GER 2' },
+                                    { label: 'GER 3', value: 'GER 3' },
+                                    { label: 'GER 4', value: 'GER 4' },
+                                    { label: 'GER 5', value: 'GER 5' },
+                                ]}
+                                placeholder="SELECT"
+                                containerStyle={{ height: 50 }}
+                                style={{
+                                    backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
+                                    borderWidth: 1
+                                }}
+                                itemStyle={{
+                                    justifyContent: 'flex-start'
+                                }}
+                                labelStyle={{
+                                    fontSize: 15,
+                                    textAlign: 'left',
+                                    color: '#000000'
+                                }}
+                                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                onChangeItem={item => this.setState({
+                                    houseNumber: item.value
+                                })}
+                            />
+                        </View>
                         <View style={styles.inBtnmarginDimension}></View>
 
                         <Text style={styles.titleHeadingText}>Enter Row Number</Text>
