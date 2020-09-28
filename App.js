@@ -37,7 +37,7 @@ export default class App extends Component {
       path: 'QualitySheetDatabase.realm',
       schema: [
           {
-              name: 'quality_sheet',
+              name: 'TL_quality_sheet',
               properties: {
                   entry_id: { type: 'int', default: 0 },
                   auditor_name: 'string',

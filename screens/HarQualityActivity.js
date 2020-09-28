@@ -921,6 +921,7 @@ export default class HarQualityActivity extends React.Component {
     calculateQualityPercentage = () => {
 
         setTimeout(() => {
+
             if (this.state.clippingOption1 === 'Pass') {
 
                 count = count + 5;
@@ -1005,7 +1006,7 @@ export default class HarQualityActivity extends React.Component {
 
             }
 
-            if (this.state.twistingOption1 === 'Pass') {
+            if (this.state.droppingOption1 === 'Pass') {
 
                 count = count + 5;
 
@@ -1016,7 +1017,7 @@ export default class HarQualityActivity extends React.Component {
             }
 
 
-            if (this.state.twistingOption2 === 'Pass') {
+            if (this.state.droppingOption2 === 'Pass') {
 
                 count = count + 5;
 
@@ -1027,7 +1028,7 @@ export default class HarQualityActivity extends React.Component {
             }
 
 
-            if (this.state.twistingOption3 === 'Pass') {
+            if (this.state.droppingOption3 === 'Pass') {
 
                 count = count + 5;
 
@@ -1038,7 +1039,7 @@ export default class HarQualityActivity extends React.Component {
             }
 
 
-            if (this.state.twistingOption4 === 'Pass') {
+            if (this.state.droppingOption4 === 'Pass') {
 
                 count = count + 5;
 
@@ -1349,6 +1350,45 @@ export default class HarQualityActivity extends React.Component {
             this.setState({ deleafingOption4: this.state.radioDeleafingItems4[0].label });
         });
         //END
+        //DROPPING 1
+        this.state.radioDroppingItems1.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioDroppingItems1: this.state.radioDroppingItems1 }, () => {
+            this.setState({ droppingOption1: this.state.radioDroppingItems1[0].label });
+        });
+        //END
+
+        //DROPPING 2
+        this.state.radioDroppingItems2.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioDroppingItems2: this.state.radioDroppingItems2 }, () => {
+            this.setState({ droppingOption2: this.state.radioDroppingItems2[0].label });
+        });
+        //END
+
+        //DROPPING 3
+        this.state.radioDroppingItems3.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioDroppingItems3: this.state.radioDroppingItems3 }, () => {
+            this.setState({ droppingOption3: this.state.radioDroppingItems3[0].label });
+        });
+        //END
+
+        //DROPPING 4
+        this.state.radioDroppingItems4.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioDroppingItems4: this.state.radioDroppingItems4 }, () => {
+            this.setState({ droppingOption4: this.state.radioDroppingItems4[0].label });
+        });
+        //END
 
 
     }
@@ -1420,7 +1460,7 @@ export default class HarQualityActivity extends React.Component {
 
                                                                                                         const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
                                                                                                         const url = `${scriptUrl}?
-                                                                                                        callback=ctrlq&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&quality_percent=${that.state.qualityPercentage}`;
+                                                                                                        callback=ctrlq&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&dropping_data1=${that.state.droppingOption1}&dropping_data2=${that.state.droppingOption2}&dropping_data3=${that.state.droppingOption3}&dropping_data4=${that.state.droppingOption4}&quality_percent=${that.state.qualityPercentage}`;
 
                                                                                                         console.log("URL : " + url);
                                                                                                         fetch(url, { mode: 'no-cors' }).then(
@@ -1428,11 +1468,11 @@ export default class HarQualityActivity extends React.Component {
                                                                                                         );
                                                                                                         realm.write(() => {
                                                                                                             var ID =
-                                                                                                                realm.objects('quality_sheet').sorted('entry_id', true).length > 0
-                                                                                                                    ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
+                                                                                                                realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
+                                                                                                                    ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
                                                                                                                         .entry_id + 1
                                                                                                                     : 1;
-                                                                                                            realm.create('quality_sheet', {
+                                                                                                            realm.create('TL_quality_sheet', {
                                                                                                                 entry_id: ID,
                                                                                                                 auditor_name: that.state.auditorsName,
                                                                                                                 house_number: that.state.houseNumber,
@@ -1458,6 +1498,10 @@ export default class HarQualityActivity extends React.Component {
                                                                                                                 deleafing_data2: that.state.deleafingOption2,
                                                                                                                 deleafing_data3: that.state.deleafingOption3,
                                                                                                                 deleafing_data4: that.state.deleafingOption4,
+                                                                                                                dropping_data1: that.state.droppingOption1,
+                                                                                                                dropping_data2: that.state.droppingOption2,
+                                                                                                                dropping_data3: that.state.droppingOption3,
+                                                                                                                dropping_data4: that.state.droppingOption4,
                                                                                                                 quality_percent: that.state.qualityPercentage,
                                                                                                                 data_send: 'Y',
                                                                                                             });
@@ -2255,6 +2299,9 @@ export default class HarQualityActivity extends React.Component {
 
 
                         </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
 
                         <TouchableOpacity
                             style={styles.buttonContainer}
