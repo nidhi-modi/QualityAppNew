@@ -20,7 +20,7 @@ export default class CheckList extends Component {
         }
 
         realm = new Realm({ path: 'QualitySheetDatabase.realm' });
-        var user_details = realm.objects('quality_sheet');
+        var user_details = realm.objects('TL_quality_sheet');
         this.state = {
             FlatListItems: user_details,
         };
@@ -30,8 +30,6 @@ export default class CheckList extends Component {
 
 
     componentDidMount() {
-
-
 
 
     }
@@ -46,7 +44,7 @@ export default class CheckList extends Component {
             <View>
                 <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
-                    {this.state.FlatListItems.length === 0 ? (<Text style={styles.message}>{this.state.notFound}</Text>) :
+                    {this.state.FlatListItems.length === 0 ? (<Text style={styles.message}>No Quality Checks Found</Text>) :
                         <FlatList
                             data={this.state.FlatListItems}
                             ItemSeparatorComponent={this.ListViewItemSeparator}
@@ -106,18 +104,18 @@ const styles = StyleSheet.create({
     },
     message: {
         padding: 16,
-        fontSize: 24,
+        fontSize: 22,
         color: 'black',
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center'
-      },
+    },
     textStyling: {
 
         fontSize: 15,
         color: '#000000',
         fontWeight: 'bold',
-        
+
     },
 
     textStylingSpace: {
