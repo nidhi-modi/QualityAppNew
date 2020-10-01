@@ -1522,11 +1522,11 @@ export default class FavQualityActivity extends React.Component {
 
                                                                                                         realm.write(() => {
                                                                                                             var ID =
-                                                                                                                realm.objects('quality_sheet').sorted('entry_id', true).length > 0
-                                                                                                                    ? realm.objects('quality_sheet').sorted('entry_id', true)[0]
+                                                                                                                realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
+                                                                                                                    ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
                                                                                                                         .entry_id + 1
                                                                                                                     : 1;
-                                                                                                            realm.create('quality_sheet', {
+                                                                                                            realm.create('TL_quality_sheet', {
                                                                                                                 entry_id: ID,
                                                                                                                 auditor_name: that.state.auditorsName,
                                                                                                                 house_number: that.state.houseNumber,
@@ -1552,6 +1552,10 @@ export default class FavQualityActivity extends React.Component {
                                                                                                                 deleafing_data2: that.state.deleafingOption2,
                                                                                                                 deleafing_data3: that.state.deleafingOption3,
                                                                                                                 deleafing_data4: that.state.deleafingOption4,
+                                                                                                                dropping_data1: that.state.droppingOption1,
+                                                                                                                dropping_data2: that.state.droppingOption2,
+                                                                                                                dropping_data3: that.state.droppingOption3,
+                                                                                                                dropping_data4: that.state.droppingOption4,
                                                                                                                 quality_percent: that.state.qualityPercentage,
                                                                                                                 data_send: 'N',
                                                                                                             });
