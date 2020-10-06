@@ -1765,6 +1765,8 @@ alert('Please select auditor name')
                                     { label: 'Francis Dee', value: 'Francis Dee' },
                                     { label: 'Nilesh Patel', value: 'Nilesh Patel' },
                                     { label: 'Chris Norris', value: 'Chris Norris' },
+                                    { label: 'Andrew Hutchinson', value: 'Andrew Hutchinson' },
+
 
                                 ]}
                                 placeholder="SELECT"
