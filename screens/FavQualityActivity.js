@@ -1452,263 +1452,263 @@ export default class FavQualityActivity extends React.Component {
                                                                                             if (deleafingOption3) {
                                                                                                 if (deleafingOption4) {*/
 
-                                                                                                    if (this.state.isItConnected === 'Online') {
+        if (this.state.isItConnected === 'Online') {
 
 
 
-                                                                                                        console.log("Connected to internet");
+            console.log("Connected to internet");
 
-                                                                                                        const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
-                                                                                                        const url = `${scriptUrl}?
+            const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+            const url = `${scriptUrl}?
                                                                                                         callback=ctrlq&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&dropping_data1=${that.state.droppingOption1}&dropping_data2=${that.state.droppingOption2}&dropping_data3=${that.state.droppingOption3}&dropping_data4=${that.state.droppingOption4}&quality_percent=${that.state.qualityPercentage}`;
 
-                                                                                                        console.log("URL : " + url);
-                                                                                                        fetch(url, { mode: 'no-cors' }).then(
-                                                                                                            () => { console.log("Data Send"); },
-                                                                                                        );
-                                                                                                        realm.write(() => {
-                                                                                                            var ID =
-                                                                                                                realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
-                                                                                                                    ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
-                                                                                                                        .entry_id + 1
-                                                                                                                    : 1;
-                                                                                                            realm.create('TL_quality_sheet', {
-                                                                                                                entry_id: ID,
-                                                                                                                auditor_name: that.state.auditorsName,
-                                                                                                                house_number: that.state.houseNumber,
-                                                                                                                row_number: that.state.rowNumber,
-                                                                                                                week_number: that.state.weekNumber,
-                                                                                                                clipping_data1: that.state.clippingOption1,
-                                                                                                                clipping_data2: that.state.clippingOption2,
-                                                                                                                clipping_data3: that.state.clippingOption3,
-                                                                                                                clipping_data4: that.state.clippingOption4,
-                                                                                                                pruning_data1: that.state.pruningOption1,
-                                                                                                                pruning_data2: that.state.pruningOption2,
-                                                                                                                pruning_data3: that.state.pruningOption3,
-                                                                                                                pruning_data4: that.state.pruningOption4,
-                                                                                                                twisting_data1: that.state.twistingOption1,
-                                                                                                                twisting_data2: that.state.twistingOption2,
-                                                                                                                twisting_data3: that.state.twistingOption3,
-                                                                                                                twisting_data4: that.state.twistingOption4,
-                                                                                                                picking_data1: that.state.pickingOption1,
-                                                                                                                picking_data2: that.state.pickingOption2,
-                                                                                                                picking_data3: that.state.pickingOption3,
-                                                                                                                picking_data4: that.state.pickingOption4,
-                                                                                                                deleafing_data1: that.state.deleafingOption1,
-                                                                                                                deleafing_data2: that.state.deleafingOption2,
-                                                                                                                deleafing_data3: that.state.deleafingOption3,
-                                                                                                                deleafing_data4: that.state.deleafingOption4,
-                                                                                                                dropping_data1: that.state.droppingOption1,
-                                                                                                                dropping_data2: that.state.droppingOption2,
-                                                                                                                dropping_data3: that.state.droppingOption3,
-                                                                                                                dropping_data4: that.state.droppingOption4,
-                                                                                                                quality_percent: that.state.qualityPercentage,
-                                                                                                                data_send: 'Y',
-                                                                                                            });
+            console.log("URL : " + url);
+            fetch(url, { mode: 'no-cors' }).then(
+                () => { console.log("Data Send"); },
+            );
+            realm.write(() => {
+                var ID =
+                    realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
+                        ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
+                            .entry_id + 1
+                        : 1;
+                realm.create('TL_quality_sheet', {
+                    entry_id: ID,
+                    auditor_name: that.state.auditorsName,
+                    house_number: that.state.houseNumber,
+                    row_number: that.state.rowNumber,
+                    week_number: that.state.weekNumber,
+                    clipping_data1: that.state.clippingOption1,
+                    clipping_data2: that.state.clippingOption2,
+                    clipping_data3: that.state.clippingOption3,
+                    clipping_data4: that.state.clippingOption4,
+                    pruning_data1: that.state.pruningOption1,
+                    pruning_data2: that.state.pruningOption2,
+                    pruning_data3: that.state.pruningOption3,
+                    pruning_data4: that.state.pruningOption4,
+                    twisting_data1: that.state.twistingOption1,
+                    twisting_data2: that.state.twistingOption2,
+                    twisting_data3: that.state.twistingOption3,
+                    twisting_data4: that.state.twistingOption4,
+                    picking_data1: that.state.pickingOption1,
+                    picking_data2: that.state.pickingOption2,
+                    picking_data3: that.state.pickingOption3,
+                    picking_data4: that.state.pickingOption4,
+                    deleafing_data1: that.state.deleafingOption1,
+                    deleafing_data2: that.state.deleafingOption2,
+                    deleafing_data3: that.state.deleafingOption3,
+                    deleafing_data4: that.state.deleafingOption4,
+                    dropping_data1: that.state.droppingOption1,
+                    dropping_data2: that.state.droppingOption2,
+                    dropping_data3: that.state.droppingOption3,
+                    dropping_data4: that.state.droppingOption4,
+                    quality_percent: that.state.qualityPercentage,
+                    data_send: 'Y',
+                });
 
 
 
-                                                                                                            this.resetRadioButtons();
-                                                                                                            this.props.navigation.navigate('FavQualityActivity')
-                                                                                                            Toast.showWithGravity('Success!! \nDetails Added Successfully.', Toast.LONG, Toast.CENTER);
-                                                                                                            this.setState({ isLoading: false })
-
-                                                                                                        });
-
-
-                                                                                                    } else {
-
-                                                                                                        console.log("Not connected to internet");
-
-                                                                                                        realm.write(() => {
-                                                                                                            var ID =
-                                                                                                                realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
-                                                                                                                    ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
-                                                                                                                        .entry_id + 1
-                                                                                                                    : 1;
-                                                                                                            realm.create('TL_quality_sheet', {
-                                                                                                                entry_id: ID,
-                                                                                                                auditor_name: that.state.auditorsName,
-                                                                                                                house_number: that.state.houseNumber,
-                                                                                                                row_number: that.state.rowNumber,
-                                                                                                                week_number: that.state.weekNumber,
-                                                                                                                clipping_data1: that.state.clippingOption1,
-                                                                                                                clipping_data2: that.state.clippingOption2,
-                                                                                                                clipping_data3: that.state.clippingOption3,
-                                                                                                                clipping_data4: that.state.clippingOption4,
-                                                                                                                pruning_data1: that.state.pruningOption1,
-                                                                                                                pruning_data2: that.state.pruningOption2,
-                                                                                                                pruning_data3: that.state.pruningOption3,
-                                                                                                                pruning_data4: that.state.pruningOption4,
-                                                                                                                twisting_data1: that.state.twistingOption1,
-                                                                                                                twisting_data2: that.state.twistingOption2,
-                                                                                                                twisting_data3: that.state.twistingOption3,
-                                                                                                                twisting_data4: that.state.twistingOption4,
-                                                                                                                picking_data1: that.state.pickingOption1,
-                                                                                                                picking_data2: that.state.pickingOption2,
-                                                                                                                picking_data3: that.state.pickingOption3,
-                                                                                                                picking_data4: that.state.pickingOption4,
-                                                                                                                deleafing_data1: that.state.deleafingOption1,
-                                                                                                                deleafing_data2: that.state.deleafingOption2,
-                                                                                                                deleafing_data3: that.state.deleafingOption3,
-                                                                                                                deleafing_data4: that.state.deleafingOption4,
-                                                                                                                dropping_data1: that.state.droppingOption1,
-                                                                                                                dropping_data2: that.state.droppingOption2,
-                                                                                                                dropping_data3: that.state.droppingOption3,
-                                                                                                                dropping_data4: that.state.droppingOption4,
-                                                                                                                quality_percent: that.state.qualityPercentage,
-                                                                                                                data_send: 'N',
-                                                                                                            });
-
-                                                                                                            this.resetRadioButtons();
-                                                                                                            this.props.navigation.navigate('FavQualityActivity')
-
-                                                                                                            Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
-                                                                                                            this.setState({ isLoading: false })
-
-
-
-                                                                                                        });
-
-
-                                                                                                    }
-
-
-
-
-
-
-
-
-                                                                                               /* } else {
-                                                                                                    this.setState({ isLoading: false })
-                                                                                                    alert('Choose one option from deleafing quality check 4')
-
-                                                                                                }
-
-                                                                                            } else {
-                                                                                                this.setState({ isLoading: false })
-                                                                                                alert('Choose one option from deleafing quality check 3')
-                                                                                            }
-
-                                                                                        } else {
-                                                                                            this.setState({ isLoading: false })
-                                                                                            alert('Choose one option from deleafing quality check 2')
-
-                                                                                        }
-
-                                                                                    } else {
-                                                                                        this.setState({ isLoading: false })
-                                                                                        alert('Choose one option from deleafing quality check 1')
-
-                                                                                    }
-
-                                                                                } else {
-                                                                                    this.setState({ isLoading: false })
-                                                                                    alert('Choose one option from picking quality check 4')
-                                                                                }
-
-                                                                            } else {
-                                                                                this.setState({ isLoading: false })
-                                                                                alert('Choose one option from picking quality check 3')
-
-                                                                            }
-
-                                                                        } else {
-                                                                            this.setState({ isLoading: false })
-                                                                            alert('Choose one option from picking quality check 2')
-                                                                        }
-
-                                                                    } else {
-                                                                        this.setState({ isLoading: false })
-                                                                        alert('Choose one option from picking quality check 1')
-
-                                                                    }
-                                                                } else {
-                                                                    this.setState({ isLoading: false })
-                                                                    alert('Choose one option from twisting quality check 4')
-
-                                                                }
-
-                                                            } else {
-                                                                this.setState({ isLoading: false })
-                                                                alert('Choose one option from twisting quality check 3')
-
-                                                            }
-
-                                                        } else {
-                                                            this.setState({ isLoading: false })
-                                                            alert('Choose one option from twisting quality check 2')
-
-                                                        }
-
-                                                    } else {
-                                                        this.setState({ isLoading: false })
-                                                        alert('Choose one option from twisting quality check 1')
-
-                                                    }
-                                                } else {
-                                                    this.setState({ isLoading: false })
-                                                    alert('Choose one option from pruning quality check 4')
-
-                                                }
-
-                                            } else {
-                                                this.setState({ isLoading: false })
-                                                alert('Choose one option from pruning quality check 3')
-                                            }
-
-                                        } else {
-                                            this.setState({ isLoading: false })
-                                            alert('Choose one option from pruning quality check 2')
-                                        }
-
-                                    } else {
-                                        this.setState({ isLoading: false })
-                                        alert('Choose one option from pruning quality check 1')
-                                    }
-
-                                } else {
-                                    this.setState({ isLoading: false })
-                                    alert('Choose one option from clipping quality check 4')
-
-                                }
-
-                            } else {
-                                this.setState({ isLoading: false })
-                                alert('Choose one option from pruning quality check 3')
-
-                            }
-
-                        } else {
-                            this.setState({ isLoading: false })
-                            alert('Choose one option from pruning quality check 2')
-
-                        }
-
-                    } else {
-                        this.setState({ isLoading: false })
-                        alert('Choose one option from pruning quality check 1')
-
-                    }
-
-                } else {
-                    this.setState({ isLoading: false })
-                    alert('Please fill row number')
-
-                }
-
-            } else {
+                this.resetRadioButtons();
+                this.props.navigation.navigate('FavQualityActivity')
+                Toast.showWithGravity('Success!! \nDetails Added Successfully.', Toast.LONG, Toast.CENTER);
                 this.setState({ isLoading: false })
-                alert('Please select house number')
 
-            }
+            });
+
 
         } else {
-            this.setState({ isLoading: false })
-            alert('Please select auditor name')
 
-        }*/
+            console.log("Not connected to internet");
+
+            realm.write(() => {
+                var ID =
+                    realm.objects('TL_quality_sheet').sorted('entry_id', true).length > 0
+                        ? realm.objects('TL_quality_sheet').sorted('entry_id', true)[0]
+                            .entry_id + 1
+                        : 1;
+                realm.create('TL_quality_sheet', {
+                    entry_id: ID,
+                    auditor_name: that.state.auditorsName,
+                    house_number: that.state.houseNumber,
+                    row_number: that.state.rowNumber,
+                    week_number: that.state.weekNumber,
+                    clipping_data1: that.state.clippingOption1,
+                    clipping_data2: that.state.clippingOption2,
+                    clipping_data3: that.state.clippingOption3,
+                    clipping_data4: that.state.clippingOption4,
+                    pruning_data1: that.state.pruningOption1,
+                    pruning_data2: that.state.pruningOption2,
+                    pruning_data3: that.state.pruningOption3,
+                    pruning_data4: that.state.pruningOption4,
+                    twisting_data1: that.state.twistingOption1,
+                    twisting_data2: that.state.twistingOption2,
+                    twisting_data3: that.state.twistingOption3,
+                    twisting_data4: that.state.twistingOption4,
+                    picking_data1: that.state.pickingOption1,
+                    picking_data2: that.state.pickingOption2,
+                    picking_data3: that.state.pickingOption3,
+                    picking_data4: that.state.pickingOption4,
+                    deleafing_data1: that.state.deleafingOption1,
+                    deleafing_data2: that.state.deleafingOption2,
+                    deleafing_data3: that.state.deleafingOption3,
+                    deleafing_data4: that.state.deleafingOption4,
+                    dropping_data1: that.state.droppingOption1,
+                    dropping_data2: that.state.droppingOption2,
+                    dropping_data3: that.state.droppingOption3,
+                    dropping_data4: that.state.droppingOption4,
+                    quality_percent: that.state.qualityPercentage,
+                    data_send: 'N',
+                });
+
+                this.resetRadioButtons();
+                this.props.navigation.navigate('FavQualityActivity')
+
+                Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
+                this.setState({ isLoading: false })
+
+
+
+            });
+
+
+        }
+
+
+
+
+
+
+
+
+        /* } else {
+             this.setState({ isLoading: false })
+             alert('Choose one option from deleafing quality check 4')
+
+         }
+
+     } else {
+         this.setState({ isLoading: false })
+         alert('Choose one option from deleafing quality check 3')
+     }
+
+ } else {
+     this.setState({ isLoading: false })
+     alert('Choose one option from deleafing quality check 2')
+
+ }
+
+} else {
+ this.setState({ isLoading: false })
+ alert('Choose one option from deleafing quality check 1')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from picking quality check 4')
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from picking quality check 3')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from picking quality check 2')
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from picking quality check 1')
+
+}
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from twisting quality check 4')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from twisting quality check 3')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from twisting quality check 2')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from twisting quality check 1')
+
+}
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 4')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 3')
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 2')
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 1')
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from clipping quality check 4')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 3')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 2')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Choose one option from pruning quality check 1')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Please fill row number')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Please select house number')
+
+}
+
+} else {
+this.setState({ isLoading: false })
+alert('Please select auditor name')
+
+}*/
 
     }
 
@@ -1748,31 +1748,44 @@ export default class FavQualityActivity extends React.Component {
 
                         <View style={styles.marginDimension}></View>
 
-                        <DropDownPicker
-                            items={[
-                                { label: 'Dasharatha Weerakoon', value: 'Dasharatha Weerakoon' },
-                                { label: 'Nilesh Patel', value: 'Nilesh Patel' },
-                            ]}
-                            placeholder="SELECT"
-                            containerStyle={{ height: 50 }}
+                        <View
                             style={{
-                                backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
-                                borderWidth: 1
-                            }}
-                            itemStyle={{
-                                justifyContent: 'flex-start'
-                            }}
-                            labelStyle={{
-                                fontSize: 15,
-                                textAlign: 'left',
-                                color: '#000000'
-                            }}
-                            dropDownStyle={{ backgroundColor: '#fafafa' }}
-                            onChangeItem={item => this.setState({
-                                auditorsName: item.value
-                            })}
-                        />
 
+                                // The solution: Apply zIndex to any device except Android
+                                ...(Platform.OS !== 'android' && {
+                                    zIndex: 20
+                                })
+
+                            }}
+                        >
+
+                            <DropDownPicker
+                                items={[
+                                    { label: 'Dasharatha Weerakoon', value: 'Dasharatha Weerakoon' },
+                                    { label: 'Nilesh Patel', value: 'Nilesh Patel' },
+                                    { label: 'Chris Norris', value: 'Chris Norris' },
+                                ]}
+                                placeholder="SELECT"
+                                containerStyle={{ height: 50 }}
+                                style={{
+                                    backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
+                                    borderWidth: 1
+                                }}
+                                itemStyle={{
+                                    justifyContent: 'flex-start'
+                                }}
+                                labelStyle={{
+                                    fontSize: 15,
+                                    textAlign: 'left',
+                                    color: '#000000'
+                                }}
+                                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                onChangeItem={item => this.setState({
+                                    auditorsName: item.value
+                                })}
+                            />
+
+                        </View>
 
                         <View style={styles.inBtnmarginDimension}></View>
 
@@ -1780,34 +1793,45 @@ export default class FavQualityActivity extends React.Component {
 
                         <View style={styles.marginDimension}></View>
 
-                        <DropDownPicker
-                            items={[
-                                { label: 'FAV 1', value: 'FAV 1' },
-                                { label: 'FAV 2', value: 'FAV 2' },
-                                { label: 'FAV 3', value: 'FAV 3' },
-                                { label: 'FAV 4', value: 'FAV 4' },
-
-                            ]}
-                            placeholder="SELECT"
-                            containerStyle={{ height: 50 }}
+                        <View
                             style={{
-                                backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
-                                borderWidth: 1
-                            }}
-                            itemStyle={{
-                                justifyContent: 'flex-start'
-                            }}
-                            labelStyle={{
-                                fontSize: 15,
-                                textAlign: 'left',
-                                color: '#000000'
-                            }}
-                            dropDownStyle={{ backgroundColor: '#fafafa' }}
-                            onChangeItem={item => this.setState({
-                                houseNumber: item.value
-                            })}
-                        />
 
+                                // The solution: Apply zIndex to any device except Android
+                                ...(Platform.OS !== 'android' && {
+                                    zIndex: 10
+                                })
+
+                            }}
+                        >
+
+                            <DropDownPicker
+                                items={[
+                                    { label: 'FAV 1', value: 'FAV 1' },
+                                    { label: 'FAV 2', value: 'FAV 2' },
+                                    { label: 'FAV 3', value: 'FAV 3' },
+                                    { label: 'FAV 4', value: 'FAV 4' },
+
+                                ]}
+                                placeholder="SELECT"
+                                containerStyle={{ height: 50 }}
+                                style={{
+                                    backgroundColor: '#ffffff', marginRight: 20, borderColor: '#000000',
+                                    borderWidth: 1
+                                }}
+                                itemStyle={{
+                                    justifyContent: 'flex-start'
+                                }}
+                                labelStyle={{
+                                    fontSize: 15,
+                                    textAlign: 'left',
+                                    color: '#000000'
+                                }}
+                                dropDownStyle={{ backgroundColor: '#fafafa' }}
+                                onChangeItem={item => this.setState({
+                                    houseNumber: item.value
+                                })}
+                            />
+                        </View>
                         <View style={styles.inBtnmarginDimension}></View>
 
                         <Text style={styles.titleHeadingText}>Enter Row Number</Text>

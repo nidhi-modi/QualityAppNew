@@ -1764,6 +1764,8 @@ alert('Please select auditor name')
                                 items={[
                                     { label: 'Francis Dee', value: 'Francis Dee' },
                                     { label: 'Nilesh Patel', value: 'Nilesh Patel' },
+                                    { label: 'Chris Norris', value: 'Chris Norris' },
+
                                 ]}
                                 placeholder="SELECT"
                                 containerStyle={{ height: 50 }}
