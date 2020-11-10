@@ -7,12 +7,12 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 
 import SiteSelection from '../screens/SiteSelection'
-import HarQualityActivity from '../screens/HarQualityActivity'
 import GerQualityActivity from '../screens/GerQualityActivity'
 import FavQualityActivity from '../screens/FavQualityActivity'
 import OhaQualityActivity from '../screens/OhaQualityActivity'
 import ScreenNavigator from '../screens/ScreenNavigator'
 import CheckList from '../screens/CheckList'
+import HarQualityActivity from '../screens/HarQualityActivity'
 
 
 const Stack = createStackNavigator();
@@ -31,7 +31,6 @@ function MainStackNavigator() {
                 initialRouteName='SiteSelection'
 
                 screenOptions={{
-                    gestureEnabled: true,
                     headerStyle: {
                         backgroundColor: '#2C903D'
                     },
@@ -51,7 +50,8 @@ function MainStackNavigator() {
 
                 <Stack.Screen name='SiteSelection' component={SiteSelection} options={{ title: 'T&G Global' }} />
 
-                <Stack.Screen name='HarQualityActivity' component={HarQualityActivity} options={({ navigation }) => ({
+
+                <Stack.Screen name='GerQualityActivity' component={GerQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
 
@@ -70,7 +70,9 @@ function MainStackNavigator() {
                     , title: 'T&G Global', headerLeft: () => null
                 })} />
 
-                <Stack.Screen name='GerQualityActivity' component={GerQualityActivity} options={({ navigation }) => ({
+              
+
+                <Stack.Screen name='HarQualityActivity' component={HarQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
 

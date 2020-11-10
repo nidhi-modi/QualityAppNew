@@ -17,19 +17,127 @@ export default class CheckList extends Component {
             selected: '',
             FlatListItems: [],
             notFound: 'No Quality Checks Found',
+            isLoading: true,
+            filtered: {}
         }
 
-        realm = new Realm({ path: 'QualitySheetDatabase.realm' });
+        /*realm = new Realm({ path: 'QualitySheetDatabase.realm' });
         var user_details = realm.objects('TL_quality_sheet');
         this.state = {
             FlatListItems: user_details,
-        };
+        };*/
 
 
     }
 
 
     componentDidMount() {
+
+        try {
+            AsyncStorage.getItem('house').then((text1Value) => {
+                houseSelected = JSON.parse(text1Value);
+
+                if (houseSelected === 'HAR') {
+
+                    //TESTING {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+
+
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                    const url = `${scriptUrl}?callback=ctrlq&action=${'doGetHar'}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+                        .then((responseJson) => {
+
+                            this.setState({ FlatListItems: responseJson, isLoading: false })
+                            console.log(this.state.FlatListItems);
+
+                        }).catch((error) => {
+
+                            console.log(error);
+                            this.setState({ isLoading: false })
+                        });
+
+                    //END
+
+                } else if (houseSelected === 'GER') {
+
+                    //TESTING {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+
+
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                    const url = `${scriptUrl}?callback=ctrlq&action=${'doGetGer'}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+                        .then((responseJson) => {
+
+                            this.setState({ FlatListItems: responseJson, isLoading: false })
+                            console.log(this.state.FlatListItems);
+
+                        }).catch((error) => {
+
+                            console.log(error);
+                            this.setState({ isLoading: false })
+                        });
+
+                    //END
+
+                } else if (houseSelected === 'OHA') {
+
+                    //TESTING {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+
+
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                    const url = `${scriptUrl}?callback=ctrlq&action=${'doGetOha'}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+                        .then((responseJson) => {
+
+                            this.setState({ FlatListItems: responseJson, isLoading: false })
+                            console.log(this.state.FlatListItems);
+
+                        }).catch((error) => {
+
+                            console.log(error);
+                            this.setState({ isLoading: false })
+                        });
+
+                    //END
+
+                } else if (houseSelected === 'FAV') {
+
+                    //TESTING {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+
+
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                    const url = `${scriptUrl}?callback=ctrlq&action=${'doGetFav'}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+                        .then((responseJson) => {
+
+                            this.setState({ FlatListItems: responseJson, isLoading: false })
+                            console.log(this.state.FlatListItems);
+
+                        }).catch((error) => {
+
+                            console.log(error);
+                            this.setState({ isLoading: false })
+                        });
+
+                    //END
+
+                } else {
+
+                }
+
+            }).done();
+        } catch (error) {
+
+
+        }
 
 
     }
@@ -40,22 +148,31 @@ export default class CheckList extends Component {
         );
     };
     render() {
+
+        if (this.state.isLoading) {
+            return (
+                <View style={styles.activity}>
+                    <ActivityIndicator size="large" color="#0000ff" />
+                </View>
+            )
+        }
         return (
             <View>
                 <ImageBackground source={require('../assets/background2.png')} style={styles.backgroundImage}>
 
                     {this.state.FlatListItems.length === 0 ? (<Text style={styles.message}>No Quality Checks Found</Text>) :
                         <FlatList
-                            data={this.state.FlatListItems}
+                            data={this.state.FlatListItems.items.sort((a,b) => new Date(b.Date) - new Date(a.Date))}
                             ItemSeparatorComponent={this.ListViewItemSeparator}
                             keyExtractor={(item, index) => index.toString()}
                             renderItem={({ item }) => (
                                 <View style={{ backgroundColor: 'transparent', margin: 20 }}>
-                                    <Text style={styles.textStyling}>Auditor Name:       {item.auditor_name}</Text>
-                                    <Text style={styles.textStylingSpace}>House Number:    {item.house_number}</Text>
-                                    <Text style={styles.textStylingSpace}>Row Number:        {item.row_number}</Text>
-                                    <Text style={styles.textStylingSpace}>Week Number:      {item.week_number}</Text>
-                                    {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+                                    <Text style={styles.textStyling}>Auditor Name:      {item.AuditorsName}</Text>
+                                    <Text style={styles.textStylingSpace}>House Number:    {item.HouseNumber}</Text>
+                                    <Text style={styles.textStylingSpace}>Row Number:        {item.RowNumber}</Text>
+                                    <Text style={styles.textStylingSpace}>Week Number:      {item.WeekNumber}</Text>
+                                    <Text style={styles.textStylingSpace}>Timestamp:           {item.Date}</Text>
+
                                 </View>
                             )}
                         />
@@ -117,6 +234,16 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
 
     },
+    activity: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
 
     textStylingSpace: {
 
