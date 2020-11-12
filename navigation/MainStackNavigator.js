@@ -13,6 +13,7 @@ import OhaQualityActivity from '../screens/OhaQualityActivity'
 import ScreenNavigator from '../screens/ScreenNavigator'
 import CheckList from '../screens/CheckList'
 import HarQualityActivity from '../screens/HarQualityActivity'
+import logout from '../screens/logout'
 
 
 const Stack = createStackNavigator();
@@ -20,11 +21,12 @@ const Stack = createStackNavigator();
 function MainStackNavigator() {
 
 
+
+
     return (
 
 
         <NavigationContainer>
-
 
 
             <Stack.Navigator
@@ -54,23 +56,52 @@ function MainStackNavigator() {
                 <Stack.Screen name='GerQualityActivity' component={GerQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
+                            <View style={{ flexDirection: "row" }}>
+                                <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                    onPress={() =>
 
-                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                                onPress={() => navigation.navigate('CheckList')}>
-                                <Image source={require('../assets/menu32.png')}
+                                        Alert.alert(
+                                            'SIGN OUT',
+                                            'Are you sure you want to sign out ?',
+                                            [
+                                                {
+                                                    text: 'No',
+                                                    style: 'cancel',
+                                                },
+                                                { text: 'Yes', onPress: () => navigation.navigate('logout') },
+                                            ]
+                                        )
+                                    } >
 
-                                    style={styles.FloatingButtonStyle2} />
+                                    <Image source={require('../assets/logout32.png')}
 
-                            </TouchableOpacity>
+                                        style={styles.FloatingButtonStyle2} />
 
-                            <View style={{
-                                marginRight: 3
-                            }}></View>
+                                </TouchableOpacity>
+
+                                <View style={{
+                                    marginLeft: 15
+                                }}></View>
+
+                                <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+
+
+                                    onPress={() => navigation.navigate('CheckList')}>
+                                    <Image source={require('../assets/menu32.png')}
+
+                                        style={styles.FloatingButtonStyle2} />
+
+                                </TouchableOpacity>
+
+                                <View style={{
+                                    marginRight: 3
+                                }}></View>
+                            </View>
                         </View>
                     , title: 'T&G Global', headerLeft: () => null
                 })} />
 
-              
+
 
                 <Stack.Screen name='HarQualityActivity' component={HarQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
@@ -94,18 +125,47 @@ function MainStackNavigator() {
                 <Stack.Screen name='FavQualityActivity' component={FavQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
+                            <View style={{ flexDirection: "row" }}>
+                                <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                    onPress={() =>
 
-                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
-                                onPress={() => navigation.navigate('CheckList')}>
-                                <Image source={require('../assets/menu32.png')}
+                                        Alert.alert(
+                                            'SIGN OUT',
+                                            'Are you sure you want to sign out ?',
+                                            [
+                                                {
+                                                    text: 'No',
+                                                    style: 'cancel',
+                                                },
+                                                { text: 'Yes', onPress: () => navigation.navigate('logout') },
+                                            ]
+                                        )
+                                    } >
 
-                                    style={styles.FloatingButtonStyle2} />
+                                    <Image source={require('../assets/logout32.png')}
 
-                            </TouchableOpacity>
+                                        style={styles.FloatingButtonStyle2} />
 
-                            <View style={{
-                                marginRight: 3
-                            }}></View>
+                                </TouchableOpacity>
+
+                                <View style={{
+                                    marginLeft: 15
+                                }}></View>
+
+                                <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+
+
+                                    onPress={() => navigation.navigate('CheckList')}>
+                                    <Image source={require('../assets/menu32.png')}
+
+                                        style={styles.FloatingButtonStyle2} />
+
+                                </TouchableOpacity>
+
+                                <View style={{
+                                    marginRight: 3
+                                }}></View>
+                            </View>
                         </View>
                     , title: 'T&G Global', headerLeft: () => null
                 })} />
@@ -133,6 +193,9 @@ function MainStackNavigator() {
 
                 <Stack.Screen name='CheckList' component={CheckList} options={{ title: 'T&G Global' }} />
 
+                <Stack.Screen name='logout' component={logout} options={{ headerLeft: () => null, title: 'T&G Global' }} />
+
+
             </Stack.Navigator>
 
         </NavigationContainer >
@@ -141,6 +204,8 @@ function MainStackNavigator() {
 
     )
 }
+
+
 
 const styles = StyleSheet.create({
 
