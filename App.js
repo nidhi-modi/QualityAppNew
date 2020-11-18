@@ -34,7 +34,7 @@ export default class App extends Component {
     //CREATE SCHEMA FOR REALM DB
 
     realm = new Realm({
-      path: 'QualitySheetDatabase.realm',
+      path: 'QualitySheetDatabase1.realm',
       schema: [
           {
               name: 'TL_quality_sheet',
@@ -68,6 +68,10 @@ export default class App extends Component {
                   dropping_data2: 'string',
                   dropping_data3: 'string',
                   dropping_data4: 'string',
+                  arching_data1: 'string',
+                  arching_data2: 'string',
+                  arching_data3: 'string',
+                  arching_data4: 'string',
                   quality_percent: 'int',
                   data_send      : 'string',
 

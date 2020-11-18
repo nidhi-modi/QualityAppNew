@@ -494,6 +494,79 @@ export default class HarQualityActivity extends React.Component {
                     }
                 ],
 
+                radioArchingItems1:
+                [
+
+                    {
+                        label: 'Pass',
+                        size: 35,
+                        color: 'green',
+                        selected: false
+                    },
+
+                    {
+                        label: 'Fail',
+                        size: 35,
+                        color: 'red',
+                        selected: false
+                    }
+                ],
+
+                radioArchingItems2:
+                [
+
+                    {
+                        label: 'Pass',
+                        size: 35,
+                        color: 'green',
+                        selected: false
+                    },
+
+                    {
+                        label: 'Fail',
+                        size: 35,
+                        color: 'red',
+                        selected: false
+                    }
+                ],
+
+                radioArchingItems3:
+                [
+
+                    {
+                        label: 'Pass',
+                        size: 35,
+                        color: 'green',
+                        selected: false
+                    },
+
+                    {
+                        label: 'Fail',
+                        size: 35,
+                        color: 'red',
+                        selected: false
+                    }
+                ],
+
+
+                radioArchingItems4:
+                [
+
+                    {
+                        label: 'Pass',
+                        size: 35,
+                        color: 'green',
+                        selected: false
+                    },
+
+                    {
+                        label: 'Fail',
+                        size: 35,
+                        color: 'red',
+                        selected: false
+                    }
+                ],
+
 
 
             clippingOption1: '',
@@ -526,6 +599,11 @@ export default class HarQualityActivity extends React.Component {
             pickingOption3: '',
             pickingOption4: '',
 
+            archingOption1: '',
+            archingOption2: '',
+            archingOption3: '',
+            archingOption4: '',
+
             auditorsName: '',
             houseNumber: '',
             rowNumber: '',
@@ -538,7 +616,7 @@ export default class HarQualityActivity extends React.Component {
         }
 
 
-        realm = new Realm({ path: 'QualitySheetDatabase.realm' });
+        realm = new Realm({ path: 'QualitySheetDatabase1.realm' });
 
 
 
@@ -679,6 +757,57 @@ export default class HarQualityActivity extends React.Component {
             this.setState({ clippingOption4: this.state.radioClippingItems4[index].label });
         });
     }
+
+    //ARCHING
+
+    changeActiveRadioArchingButton1(index) {
+        this.state.radioArchingItems1.map((item) => {
+            item.selected = false;
+        });
+
+        this.state.radioArchingItems1[index].selected = true;
+
+        this.setState({ radioArchingItems1: this.state.radioArchingItems1 }, () => {
+            this.setState({ archingOption1: this.state.radioArchingItems1[index].label });
+        });
+    }
+
+    changeActiveRadioArchingButton2(index) {
+        this.state.radioArchingItems2.map((item) => {
+            item.selected = false;
+        });
+
+        this.state.radioArchingItems2[index].selected = true;
+
+        this.setState({ radioArchingItems2: this.state.radioArchingItems2 }, () => {
+            this.setState({ archingOption2: this.state.radioArchingItems2[index].label });
+        });
+    }
+
+    changeActiveRadioArchingButton3(index) {
+        this.state.radioArchingItems3.map((item) => {
+            item.selected = false;
+        });
+
+        this.state.radioArchingItems3[index].selected = true;
+
+        this.setState({ radioArchingItems3: this.state.radioArchingItems3 }, () => {
+            this.setState({ archingOption3: this.state.radioArchingItems3[index].label });
+        });
+    }
+
+    changeActiveRadioArchingButton4(index) {
+        this.state.radioArchingItems4.map((item) => {
+            item.selected = false;
+        });
+
+        this.state.radioArchingItems4[index].selected = true;
+
+        this.setState({ radioArchingItems4: this.state.radioArchingItems4 }, () => {
+            this.setState({ archingOption4: this.state.radioArchingItems4[index].label });
+        });
+    }
+
 
     //DROPPING
 
@@ -1405,6 +1534,46 @@ export default class HarQualityActivity extends React.Component {
         });
         //END
 
+         //ARCHING 1
+         this.state.radioArchingItems1.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems1: this.state.radioArchingItems1 }, () => {
+            this.setState({ archingOption1: this.state.radioArchingItems1[0].label });
+        });
+        //END
+
+        //ARCHING 2
+        this.state.radioArchingItems2.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems2: this.state.radioArchingItems2 }, () => {
+            this.setState({ archingOption2: this.state.radioArchingItems2[0].label });
+        });
+        //END
+
+        //ARCHING 3
+        this.state.radioArchingItems3.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems3: this.state.radioArchingItems3 }, () => {
+            this.setState({ archingOption3: this.state.radioArchingItems3[0].label });
+        });
+        //END
+
+        //ARCHING 4
+        this.state.radioArchingItems4.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems4: this.state.radioArchingItems4 }, () => {
+            this.setState({ archingOption4: this.state.radioArchingItems4[0].label });
+        });
+        //END
+
         //this.textInput.clear()
 
 
@@ -1450,6 +1619,50 @@ export default class HarQualityActivity extends React.Component {
 
         this.setState({ radioClippingItems4: this.state.radioClippingItems4 }, () => {
             this.setState({ clippingOption4: this.state.radioClippingItems4[0].label });
+        });
+        //END
+
+    }
+
+    clearArchingRadio = () => {
+
+          //ARCHING 1
+          this.state.radioArchingItems1.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems1: this.state.radioArchingItems1 }, () => {
+            this.setState({ archingOption1: this.state.radioArchingItems1[0].label });
+        });
+        //END
+
+        //ARCHING 2
+        this.state.radioArchingItems2.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems2: this.state.radioArchingItems2 }, () => {
+            this.setState({ archingOption2: this.state.radioArchingItems2[0].label });
+        });
+        //END
+
+        //ARCHING 3
+        this.state.radioArchingItems3.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems3: this.state.radioArchingItems3 }, () => {
+            this.setState({ archingOption3: this.state.radioArchingItems3[0].label });
+        });
+        //END
+
+        //ARCHING 4
+        this.state.radioArchingItems4.map((item) => {
+            item.selected = false;
+        });
+
+        this.setState({ radioArchingItems4: this.state.radioArchingItems4 }, () => {
+            this.setState({ archingOption4: this.state.radioArchingItems4[0].label });
         });
         //END
 
@@ -1740,7 +1953,7 @@ export default class HarQualityActivity extends React.Component {
 
                         const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
                         const url = `${scriptUrl}?
-            callback=ctrlq&action=${'doPostHar'}&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&dropping_data1=${that.state.droppingOption1}&dropping_data2=${that.state.droppingOption2}&dropping_data3=${that.state.droppingOption3}&dropping_data4=${that.state.droppingOption4}&quality_percent=${that.state.qualityPercentage}`;
+            callback=ctrlq&action=${'doPostHar'}&auditor_name=${that.state.auditorsName}&house_number=${that.state.houseNumber}&row_number=${that.state.rowNumber}&week_number=${that.state.weekNumber}&clipping_data1=${that.state.clippingOption1}&clipping_data2=${that.state.clippingOption2}&clipping_data3=${that.state.clippingOption3}&clipping_data4=${that.state.clippingOption4}&pruning_data1=${that.state.pruningOption1}&pruning_data2=${that.state.pruningOption2}&pruning_data3=${that.state.pruningOption3}&pruning_data4=${that.state.pruningOption4}&twisting_data1=${that.state.twistingOption1}&twisting_data2=${that.state.twistingOption2}&twisting_data3=${that.state.twistingOption3}&twisting_data4=${that.state.twistingOption4}&picking_data1=${that.state.pickingOption1}&picking_data2=${that.state.pickingOption2}&picking_data3=${that.state.pickingOption3}&picking_data4=${that.state.pickingOption4}&deleafing_data1=${that.state.deleafingOption1}&deleafing_data2=${that.state.deleafingOption2}&deleafing_data3=${that.state.deleafingOption3}&deleafing_data4=${that.state.deleafingOption4}&dropping_data1=${that.state.droppingOption1}&dropping_data2=${that.state.droppingOption2}&dropping_data3=${that.state.droppingOption3}&dropping_data4=${that.state.droppingOption4}&arching_data1=${that.state.archingOption1}&arching_data2=${that.state.archingOption2}&arching_data3=${that.state.archingOption3}&arching_data4=${that.state.archingOption4}&quality_percent=${that.state.qualityPercentage}`;
 
                         console.log("URL : " + url);
                         fetch(url, { mode: 'no-cors' }).then(
@@ -1782,6 +1995,10 @@ export default class HarQualityActivity extends React.Component {
                                 dropping_data2: that.state.droppingOption2,
                                 dropping_data3: that.state.droppingOption3,
                                 dropping_data4: that.state.droppingOption4,
+                                arching_data1: that.state.archingOption1,
+                                arching_data2: that.state.archingOption2,
+                                arching_data3: that.state.archingOption3,
+                                arching_data4: that.state.archingOption4,
                                 quality_percent: that.state.qualityPercentage,
                                 data_send: 'Y',
                             });
@@ -1835,6 +2052,10 @@ export default class HarQualityActivity extends React.Component {
                                 dropping_data2: that.state.droppingOption2,
                                 dropping_data3: that.state.droppingOption3,
                                 dropping_data4: that.state.droppingOption4,
+                                arching_data1: that.state.archingOption1,
+                                arching_data2: that.state.archingOption2,
+                                arching_data3: that.state.archingOption3,
+                                arching_data4: that.state.archingOption4,
                                 quality_percent: that.state.qualityPercentage,
                                 data_send: 'N',
                             });
@@ -2295,6 +2516,91 @@ export default class HarQualityActivity extends React.Component {
 
 
                         </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+
+                        <View style={styles.direction}>
+                            <Text style={styles.text}></Text>
+                            <Text style={styles.text}>ARCHING</Text>
+                            <Text style={styles.textClear} onPress={this.clearArchingRadio}>Clear</Text>
+
+                        </View>
+
+                        <View style={styles.inBtnmarginDimension}></View>
+
+                        <Text style={styles.titleHeading2Text}>1) Position of arch: proper <Text style={styles.redColor}>(3 each)</Text> </Text>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <View style={styles.flexDirection}>
+
+                                {
+                                    this.state.radioArchingItems1.map((item, key) =>
+                                        (
+                                            <RadioButton key={key} button={item} onClick={this.changeActiveRadioArchingButton1.bind(this, key)} />
+                                        ))
+                                }
+
+
+                            </View>
+
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <Text style={styles.titleHeading2Text}>2) Arching at the right stage. Arch: as long as it fits and doesn't touch last bud <Text style={styles.redColor}>(3 each)</Text> </Text>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <View style={styles.flexDirection}>
+
+                                {
+                                    this.state.radioArchingItems2.map((item, key) =>
+                                        (
+                                            <RadioButton key={key} button={item} onClick={this.changeActiveRadioArchingButton2.bind(this, key)} />
+                                        ))
+                                }
+
+
+                            </View>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <Text style={styles.titleHeading2Text}>3) De-skinning of truss. Not forcing truss on to tear skin <Text style={styles.redColor}>(1 each)</Text> </Text>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <View style={styles.flexDirection}>
+
+                                {
+                                    this.state.radioArchingItems3.map((item, key) =>
+                                        (
+                                            <RadioButton key={key} button={item} onClick={this.changeActiveRadioArchingButton3.bind(this, key)} />
+                                        ))
+                                }
+
+
+                            </View>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <Text style={styles.titleHeading2Text}>4) No broken trusses <Text style={styles.redColor}>(3 each)</Text> </Text>
+
+                            <View style={styles.inBtnmarginDimension}></View>
+
+                            <View style={styles.flexDirection}>
+
+                                {
+                                    this.state.radioArchingItems4.map((item, key) =>
+                                        (
+                                            <RadioButton key={key} button={item} onClick={this.changeActiveRadioArchingButton4.bind(this, key)} />
+                                        ))
+                                }
+
+
+                            </View>
+
+
 
                         <View style={styles.inBtnmarginDimension}></View>
 

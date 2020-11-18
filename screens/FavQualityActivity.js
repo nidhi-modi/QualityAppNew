@@ -527,7 +527,7 @@ export default class FavQualityActivity extends React.Component {
         }
 
 
-        realm = new Realm({ path: 'QualitySheetDatabase.realm' });
+        realm = new Realm({ path: 'QualitySheetDatabase1.realm' });
 
 
 
@@ -1766,6 +1766,10 @@ export default class FavQualityActivity extends React.Component {
                                 dropping_data2: that.state.droppingOption2,
                                 dropping_data3: that.state.droppingOption3,
                                 dropping_data4: that.state.droppingOption4,
+                                arching_data1: '',
+                                arching_data2: '',
+                                arching_data3: '',
+                                arching_data4: '',
                                 quality_percent: that.state.qualityPercentage,
                                 data_send: 'Y',
                             });
@@ -1820,6 +1824,10 @@ export default class FavQualityActivity extends React.Component {
                                 dropping_data2: that.state.droppingOption2,
                                 dropping_data3: that.state.droppingOption3,
                                 dropping_data4: that.state.droppingOption4,
+                                arching_data1: '',
+                                arching_data2: '',
+                                arching_data3: '',
+                                arching_data4: '',
                                 quality_percent: that.state.qualityPercentage,
                                 data_send: 'N',
                             });
