@@ -173,6 +173,8 @@ export default class CheckList extends Component {
                                     <Text style={styles.textStylingSpace}>Week Number:      {item.WeekNumber}</Text>
                                     <Text style={styles.textStylingSpace}>Timestamp:           {item.Date}</Text>
 
+
+
                                 </View>
                             )}
                         />
