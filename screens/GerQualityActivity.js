@@ -596,7 +596,7 @@ export default class GerQualityActivity extends React.Component {
 
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
 
-        var numberWeek = 2000 + currentWeekNumber(new Date());
+        var numberWeek = 2100 + currentWeekNumber(new Date());
         console.log("Current Week Number: ", numberWeek);
         this.setState({ weekNumber: numberWeek })
 
@@ -2045,6 +2045,7 @@ export default class GerQualityActivity extends React.Component {
                                     { label: 'Francis Dee', value: 'Francis Dee' },
                                     { label: 'Nilesh Patel', value: 'Nilesh Patel' },
                                     { label: 'Gurjant Singh', value: 'Gurjant Singh' },
+                                    { label: 'Heather Feetham', value: 'Heather Feetham' },
 
 
                                 ]}
