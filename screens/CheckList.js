@@ -129,6 +129,29 @@ export default class CheckList extends Component {
 
                     //END
 
+                } else if (houseSelected === 'REP') {
+
+                    //TESTING {item.quality_percent <= 85 ? (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.redColor}>{item.quality_percent}%</Text></Text>) : (<Text style={styles.textStylingSpace}>Quality Percent:   <Text style={styles.greenColor}>{item.quality_percent}%</Text></Text>)}
+
+
+                    const scriptUrl = 'https://script.google.com/macros/s/AKfycbz69p6TE-1FMKQsh19dqkR4CFJfao5UnGUJIB1npBV2MWHrR9w/exec';
+                    const url = `${scriptUrl}?callback=ctrlq&action=${'doGetRep'}`;
+
+                    console.log("URL : " + url);
+                    fetch(url, { mode: 'no-cors' }).then((response) => response.json())
+                        .then((responseJson) => {
+
+                            this.setState({ FlatListItems: responseJson, isLoading: false })
+                            console.log(this.state.FlatListItems);
+
+                        }).catch((error) => {
+
+                            console.log(error);
+                            this.setState({ isLoading: false })
+                        });
+
+                    //END
+
                 } else {
 
                 }

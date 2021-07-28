@@ -14,6 +14,8 @@ import ScreenNavigator from '../screens/ScreenNavigator'
 import CheckList from '../screens/CheckList'
 import HarQualityActivity from '../screens/HarQualityActivity'
 import logout from '../screens/logout'
+import RepQualityActivity from '../screens/RepQualityActivity'
+
 
 
 const Stack = createStackNavigator();
@@ -171,6 +173,25 @@ function MainStackNavigator() {
                 })} />
 
                 <Stack.Screen name='OhaQualityActivity' component={OhaQualityActivity} options={({ navigation }) => ({
+                    headerRight: () =>
+                        <View style={{ margin: 5 }}>
+
+                            <TouchableOpacity activeOpacity={0.5} style={styles.TouchableOpacityStyle}
+                                onPress={() => navigation.navigate('CheckList')}>
+                                <Image source={require('../assets/menu32.png')}
+
+                                    style={styles.FloatingButtonStyle2} />
+
+                            </TouchableOpacity>
+
+                            <View style={{
+                                marginRight: 3
+                            }}></View>
+                        </View>
+                    , title: 'T&G Global', headerLeft: () => null
+                })} />
+
+                <Stack.Screen name='RepQualityActivity' component={RepQualityActivity} options={({ navigation }) => ({
                     headerRight: () =>
                         <View style={{ margin: 5 }}>
 

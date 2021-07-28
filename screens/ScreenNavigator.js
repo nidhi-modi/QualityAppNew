@@ -44,6 +44,12 @@ export default class ScreenNavigator extends React.Component {
 
 
 
+        } else if (houseSelected === 'REP') {
+
+            this.props.navigation.navigate('RepQualityActivity');
+
+
+
         } else {
 
         }
