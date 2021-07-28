@@ -2031,8 +2031,7 @@ export default class RepQualityActivity extends React.Component {
 
                             <DropDownPicker
                                 items={[
-                                    { label: 'Ravi Sarju', value: 'Ravi Sarju' },
-                                    { label: 'Davinash Naicker', value: 'Davinash Naicker' },
+                                    { label: 'Chris Cowie', value: 'Chris Cowie' },
                                     { label: 'Jesse Masina Sua', value: 'Jesse Masina Sua' },
 
 
