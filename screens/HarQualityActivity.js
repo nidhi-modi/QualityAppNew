@@ -58,6 +58,8 @@ export default class HarQualityActivity extends React.Component {
                 { label: 'Gerard Snyman', value: 'Gerard Snyman' },
                 { label: 'Chris Norris', value: 'Chris Norris' },
                 { label: 'Andrew Hutchinson', value: 'Andrew Hutchinson' },
+                { label: 'Jesse Masina Sua', value: 'Jesse Masina Sua' },
+
 
 
             ],

@@ -162,7 +162,7 @@ export default class CheckList extends Component {
 
                     {this.state.FlatListItems.length === 0 ? (<Text style={styles.message}>No Quality Checks Found</Text>) :
                         <FlatList
-                            data={this.state.FlatListItems.items.sort((a,b) => new Date(b.Date) - new Date(a.Date))}
+                            data={this.state.FlatListItems.items.sort((a, b) => new Date(b.Date) - new Date(a.Date))}
                             ItemSeparatorComponent={this.ListViewItemSeparator}
                             keyExtractor={(item, index) => index.toString()}
                             renderItem={({ item }) => (

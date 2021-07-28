@@ -2042,10 +2042,11 @@ export default class GerQualityActivity extends React.Component {
 
                             <DropDownPicker
                                 items={[
-                                    { label: 'Francis Dee', value: 'Francis Dee' },
+                                    { label: 'Nick Wang', value: 'Nick Wang' },
                                     { label: 'Nilesh Patel', value: 'Nilesh Patel' },
-                                    { label: 'Gurjant Singh', value: 'Gurjant Singh' },
+                                    { label: 'Dasharatha Weerakoon', value: 'Dasharatha Weerakoon' },
                                     { label: 'Heather Feetham', value: 'Heather Feetham' },
+                                    { label: 'Jesse Masina Sua', value: 'Jesse Masina Sua' },
 
 
                                 ]}
