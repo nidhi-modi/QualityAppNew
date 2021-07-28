@@ -687,7 +687,7 @@ export default class HarQualityActivity extends React.Component {
 
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
 
-        var numberWeek = 2100 + currentWeekNumber(new Date());
+        var numberWeek = 2100 + currentWeekNumber(new Date())-1;
         console.log("Current Week Number: ", numberWeek);
         this.setState({ weekNumber: numberWeek })
 
