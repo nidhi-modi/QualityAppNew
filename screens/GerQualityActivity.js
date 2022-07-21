@@ -495,6 +495,7 @@ export default class GerQualityActivity extends React.Component {
       houseNumber: '',
       rowNumber: '',
       weekNumber: '',
+      comments: '',
 
       isItConnected: '',
       isDataSend: false,
@@ -1736,6 +1737,7 @@ export default class GerQualityActivity extends React.Component {
     const {deleafingOption3} = this.state;
     const {deleafingOption4} = this.state;
     const {qualityPercentage} = this.state;
+    const {comments} = this.state;
     const {data_send} = this.state;
 
     if (auditorsName) {
@@ -1798,7 +1800,7 @@ export default class GerQualityActivity extends React.Component {
               that.state.droppingOption3
             }&dropping_data4=${that.state.droppingOption4}&quality_percent=${
               that.state.qualityPercentage
-            }`;
+            }&general_comments=${that.state.comments}`;
 
             console.log('URL : ' + url);
             fetch(url, {mode: 'no-cors'}).then(() => {
@@ -2748,6 +2750,32 @@ export default class GerQualityActivity extends React.Component {
                   )}
                 />
               ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeadingText}>
+              Enter Comments (Optional)
+            </Text>
+
+            <View style={styles.borderEdit}>
+              <TextInput
+                style={styles.textInputStyle}
+                autoCapitalize="none"
+                multiline={false}
+                autoCorrect={false}
+                enablesReturnKeyAutomatically={true}
+                onChangeText={(text) =>
+                  this.setState({
+                    comments: text,
+                  })
+                }
+                returnKeyType={'done'}
+                keyboardType={'default'}
+                ref={(input) => {
+                  this.textInput = input;
+                }}
+              />
             </View>
 
             <View style={styles.inBtnmarginDimension}></View>
