@@ -2342,7 +2342,49 @@ export default class HarQualityActivity extends React.Component {
               //add truss cutting in SQL
 
               this.resetRadioButtons();
-              this.setState({});
+              this.setState({
+                clippingOption1: '',
+      clippingOption2: '',
+      clippingOption3: '',
+      clippingOption4: '',
+
+      droppingOption1: '',
+      droppingOption2: '',
+      droppingOption3: '',
+      droppingOption4: '',
+
+      pruningOption1: '',
+      pruningOption2: '',
+      pruningOption3: '',
+      pruningOption4: '',
+
+      twistingOption1: '',
+      twistingOption2: '',
+      twistingOption3: '',
+      twistingOption4: '',
+
+      deleafingOption1: '',
+      deleafingOption2: '',
+      deleafingOption3: '',
+      deleafingOption4: '',
+
+      pickingOption1: '',
+      pickingOption2: '',
+      pickingOption3: '',
+      pickingOption4: '',
+
+      archingOption1: '',
+      archingOption2: '',
+      archingOption3: '',
+      archingOption4: '',
+
+      trussCuttingOption1: '',
+      trussCuttingOption2: '',
+      trussCuttingOption3: '',
+      trussCuttingOption4: '',
+
+      qualityPercentage: 0,
+              });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.showWithGravity(
                 'Success!! \nDetails Added Successfully.',
@@ -2400,7 +2442,53 @@ export default class HarQualityActivity extends React.Component {
                 data_send: 'N',
               });
 
+              
+              //add truss cutting in SQL
+
               this.resetRadioButtons();
+              this.setState({
+                clippingOption1: '',
+      clippingOption2: '',
+      clippingOption3: '',
+      clippingOption4: '',
+
+      droppingOption1: '',
+      droppingOption2: '',
+      droppingOption3: '',
+      droppingOption4: '',
+
+      pruningOption1: '',
+      pruningOption2: '',
+      pruningOption3: '',
+      pruningOption4: '',
+
+      twistingOption1: '',
+      twistingOption2: '',
+      twistingOption3: '',
+      twistingOption4: '',
+
+      deleafingOption1: '',
+      deleafingOption2: '',
+      deleafingOption3: '',
+      deleafingOption4: '',
+
+      pickingOption1: '',
+      pickingOption2: '',
+      pickingOption3: '',
+      pickingOption4: '',
+
+      archingOption1: '',
+      archingOption2: '',
+      archingOption3: '',
+      archingOption4: '',
+
+      trussCuttingOption1: '',
+      trussCuttingOption2: '',
+      trussCuttingOption3: '',
+      trussCuttingOption4: '',
+
+      qualityPercentage: 0,
+              });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
               this.setState({isLoading: false});

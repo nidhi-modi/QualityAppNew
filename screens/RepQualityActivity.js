@@ -1844,6 +1844,40 @@ export default class RepQualityActivity extends React.Component {
               });
 
               this.resetRadioButtons();
+
+              this.setState({
+                clippingOption1: '',
+                clippingOption2: '',
+                clippingOption3: '',
+                clippingOption4: '',
+          
+                droppingOption1: '',
+                droppingOption2: '',
+                droppingOption3: '',
+                droppingOption4: '',
+          
+                pruningOption1: '',
+                pruningOption2: '',
+                pruningOption3: '',
+                pruningOption4: '',
+          
+                twistingOption1: '',
+                twistingOption2: '',
+                twistingOption3: '',
+                twistingOption4: '',
+          
+                deleafingOption1: '',
+                deleafingOption2: '',
+                deleafingOption3: '',
+                deleafingOption4: '',
+          
+                pickingOption1: '',
+                pickingOption2: '',
+                pickingOption3: '',
+                pickingOption4: '',
+         
+                qualityPercentage: 0,
+              })
               this.props.navigation.navigate('RepQualityActivity');
               Toast.showWithGravity(
                 'Success!! \nDetails Added Successfully.',
@@ -1902,6 +1936,39 @@ export default class RepQualityActivity extends React.Component {
               });
 
               this.resetRadioButtons();
+              this.setState({
+                clippingOption1: '',
+                clippingOption2: '',
+                clippingOption3: '',
+                clippingOption4: '',
+          
+                droppingOption1: '',
+                droppingOption2: '',
+                droppingOption3: '',
+                droppingOption4: '',
+          
+                pruningOption1: '',
+                pruningOption2: '',
+                pruningOption3: '',
+                pruningOption4: '',
+          
+                twistingOption1: '',
+                twistingOption2: '',
+                twistingOption3: '',
+                twistingOption4: '',
+          
+                deleafingOption1: '',
+                deleafingOption2: '',
+                deleafingOption3: '',
+                deleafingOption4: '',
+          
+                pickingOption1: '',
+                pickingOption2: '',
+                pickingOption3: '',
+                pickingOption4: '',
+          
+                qualityPercentage: 0,
+              })
               this.props.navigation.navigate('RepQualityActivity');
 
               Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
