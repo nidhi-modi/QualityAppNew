@@ -2154,7 +2154,7 @@ export default class GerQualityActivity extends React.Component {
                   {label: 'Lua Tafau', value: 'Lua Tafau'},
                   {
                     label: 'Dasharatha Weerakoon',
-                    value: 'Dasharatha Weerakoon',
+                    value: 'Dasharatha Weerakoon'
                   },
                 ]}
                 controller={(instance) => (this.controller = instance)}

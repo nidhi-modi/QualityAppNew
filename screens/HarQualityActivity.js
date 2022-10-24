@@ -80,10 +80,9 @@ export default class HarQualityActivity extends React.Component {
 
       name: [
         {label: 'Herman Fourie', value: 'Herman Fourie'},
-        {label: 'Gerard Snyman', value: 'Gerard Snyman'},
-        {label: 'Chris Norris', value: 'Chris Norris'},
+        {label: 'Anton Fernando', value: 'Anton Fernando'},
         {label: 'Gaurav Bhalla', value: 'Gaurav Bhalla'},
-        {label: 'Jesse Masina Sua', value: 'Jesse Masina Sua'},
+        {label: 'Chris Norris', value: 'Chris Norris'},
       ],
 
       radioClippingItems1: [
@@ -2344,46 +2343,46 @@ export default class HarQualityActivity extends React.Component {
               this.resetRadioButtons();
               this.setState({
                 clippingOption1: '',
-      clippingOption2: '',
-      clippingOption3: '',
-      clippingOption4: '',
+                clippingOption2: '',
+                clippingOption3: '',
+                clippingOption4: '',
 
-      droppingOption1: '',
-      droppingOption2: '',
-      droppingOption3: '',
-      droppingOption4: '',
+                droppingOption1: '',
+                droppingOption2: '',
+                droppingOption3: '',
+                droppingOption4: '',
 
-      pruningOption1: '',
-      pruningOption2: '',
-      pruningOption3: '',
-      pruningOption4: '',
+                pruningOption1: '',
+                pruningOption2: '',
+                pruningOption3: '',
+                pruningOption4: '',
 
-      twistingOption1: '',
-      twistingOption2: '',
-      twistingOption3: '',
-      twistingOption4: '',
+                twistingOption1: '',
+                twistingOption2: '',
+                twistingOption3: '',
+                twistingOption4: '',
 
-      deleafingOption1: '',
-      deleafingOption2: '',
-      deleafingOption3: '',
-      deleafingOption4: '',
+                deleafingOption1: '',
+                deleafingOption2: '',
+                deleafingOption3: '',
+                deleafingOption4: '',
 
-      pickingOption1: '',
-      pickingOption2: '',
-      pickingOption3: '',
-      pickingOption4: '',
+                pickingOption1: '',
+                pickingOption2: '',
+                pickingOption3: '',
+                pickingOption4: '',
 
-      archingOption1: '',
-      archingOption2: '',
-      archingOption3: '',
-      archingOption4: '',
+                archingOption1: '',
+                archingOption2: '',
+                archingOption3: '',
+                archingOption4: '',
 
-      trussCuttingOption1: '',
-      trussCuttingOption2: '',
-      trussCuttingOption3: '',
-      trussCuttingOption4: '',
+                trussCuttingOption1: '',
+                trussCuttingOption2: '',
+                trussCuttingOption3: '',
+                trussCuttingOption4: '',
 
-      qualityPercentage: 0,
+                qualityPercentage: 0,
               });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.showWithGravity(
@@ -2442,52 +2441,51 @@ export default class HarQualityActivity extends React.Component {
                 data_send: 'N',
               });
 
-              
               //add truss cutting in SQL
 
               this.resetRadioButtons();
               this.setState({
                 clippingOption1: '',
-      clippingOption2: '',
-      clippingOption3: '',
-      clippingOption4: '',
+                clippingOption2: '',
+                clippingOption3: '',
+                clippingOption4: '',
 
-      droppingOption1: '',
-      droppingOption2: '',
-      droppingOption3: '',
-      droppingOption4: '',
+                droppingOption1: '',
+                droppingOption2: '',
+                droppingOption3: '',
+                droppingOption4: '',
 
-      pruningOption1: '',
-      pruningOption2: '',
-      pruningOption3: '',
-      pruningOption4: '',
+                pruningOption1: '',
+                pruningOption2: '',
+                pruningOption3: '',
+                pruningOption4: '',
 
-      twistingOption1: '',
-      twistingOption2: '',
-      twistingOption3: '',
-      twistingOption4: '',
+                twistingOption1: '',
+                twistingOption2: '',
+                twistingOption3: '',
+                twistingOption4: '',
 
-      deleafingOption1: '',
-      deleafingOption2: '',
-      deleafingOption3: '',
-      deleafingOption4: '',
+                deleafingOption1: '',
+                deleafingOption2: '',
+                deleafingOption3: '',
+                deleafingOption4: '',
 
-      pickingOption1: '',
-      pickingOption2: '',
-      pickingOption3: '',
-      pickingOption4: '',
+                pickingOption1: '',
+                pickingOption2: '',
+                pickingOption3: '',
+                pickingOption4: '',
 
-      archingOption1: '',
-      archingOption2: '',
-      archingOption3: '',
-      archingOption4: '',
+                archingOption1: '',
+                archingOption2: '',
+                archingOption3: '',
+                archingOption4: '',
 
-      trussCuttingOption1: '',
-      trussCuttingOption2: '',
-      trussCuttingOption3: '',
-      trussCuttingOption4: '',
+                trussCuttingOption1: '',
+                trussCuttingOption2: '',
+                trussCuttingOption3: '',
+                trussCuttingOption4: '',
 
-      qualityPercentage: 0,
+                qualityPercentage: 0,
               });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
