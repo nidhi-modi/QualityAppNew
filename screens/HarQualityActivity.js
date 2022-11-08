@@ -80,7 +80,7 @@ export default class HarQualityActivity extends React.Component {
 
       name: [
         {label: 'Herman Fourie', value: 'Herman Fourie'},
-        {label: 'Anton Fernando', value: 'Anton Fernando'},
+        {label: 'Lua Tafau', value: 'Lua Tafau'},
         {label: 'Gaurav Bhalla', value: 'Gaurav Bhalla'},
         {label: 'Chris Norris', value: 'Chris Norris'},
       ],
