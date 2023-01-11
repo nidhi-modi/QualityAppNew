@@ -81,8 +81,10 @@ export default class HarQualityActivity extends React.Component {
       name: [
         {label: 'Herman Fourie', value: 'Herman Fourie'},
         {label: 'Lua Tafau', value: 'Lua Tafau'},
-        {label: 'Gaurav Bhalla', value: 'Gaurav Bhalla'},
+        {label: 'Aroha Majoor', value: 'Aroha Majoor'},
         {label: 'Chris Norris', value: 'Chris Norris'},
+        {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
+        {label: 'Ben Smith', value: 'Ben Smith'},
       ],
 
       radioClippingItems1: [

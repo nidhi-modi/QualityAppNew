@@ -2150,12 +2150,15 @@ export default class GerQualityActivity extends React.Component {
                 items={[
                   {label: 'Nick Wang', value: 'Nick Wang'},
                   {label: 'Nilesh Patel', value: 'Nilesh Patel'},
-                  {label: 'Chris Norris', value: 'Chris Norris'},
                   {label: 'Anton Fernando', value: 'Anton Fernando'},
                   {
                     label: 'Dasharatha Weerakoon',
                     value: 'Dasharatha Weerakoon',
                   },
+                  {label: 'Chris Norris', value: 'Chris Norris'},
+                  {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
+                  {label: 'Ben Smith', value: 'Ben Smith'},
+
                 ]}
                 controller={(instance) => (this.controller = instance)}
                 placeholder="SELECT"
