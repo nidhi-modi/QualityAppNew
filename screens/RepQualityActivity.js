@@ -461,6 +461,134 @@ export default class RepQualityActivity extends React.Component {
         },
       ],
 
+      radioTrussCuttingItems1: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioTrussCuttingItems2: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioTrussCuttingItems3: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioTrussCuttingItems4: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems1: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems2: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems3: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems4: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
       clippingOption1: '',
       clippingOption2: '',
       clippingOption3: '',
@@ -490,6 +618,16 @@ export default class RepQualityActivity extends React.Component {
       pickingOption2: '',
       pickingOption3: '',
       pickingOption4: '',
+
+      trussCuttingOption1: '',
+      trussCuttingOption2: '',
+      trussCuttingOption3: '',
+      trussCuttingOption4: '',
+
+      densityOption1: '',
+      densityOption2: '',
+      densityOption3: '',
+      densityOption4: '',
 
       auditorsName: '',
       houseNumber: '',
@@ -633,6 +771,134 @@ export default class RepQualityActivity extends React.Component {
     this.setState({radioClippingItems4: this.state.radioClippingItems4}, () => {
       this.setState({
         clippingOption4: this.state.radioClippingItems4[index].label,
+      });
+    });
+  }
+
+  //TRUSS CUTTING
+
+  changeActiveRadioTrussCuttingButton1(index) {
+    this.state.radioTrussCuttingItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioTrussCuttingItems1[index].selected = true;
+
+    this.setState(
+      {radioTrussCuttingItems1: this.state.radioTrussCuttingItems1},
+      () => {
+        this.setState({
+          trussCuttingOption1: this.state.radioTrussCuttingItems1[index].label,
+        });
+      },
+    );
+  }
+
+  changeActiveRadioTrussCuttingButton2(index) {
+    this.state.radioTrussCuttingItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioTrussCuttingItems2[index].selected = true;
+
+    this.setState(
+      {radioTrussCuttingItems2: this.state.radioTrussCuttingItems2},
+      () => {
+        this.setState({
+          trussCuttingOption2: this.state.radioTrussCuttingItems2[index].label,
+        });
+      },
+    );
+  }
+
+  changeActiveRadioTrussCuttingButton3(index) {
+    this.state.radioTrussCuttingItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioTrussCuttingItems3[index].selected = true;
+
+    this.setState(
+      {radioTrussCuttingItems3: this.state.radioTrussCuttingItems3},
+      () => {
+        this.setState({
+          trussCuttingOption3: this.state.radioTrussCuttingItems3[index].label,
+        });
+      },
+    );
+  }
+
+  changeActiveRadioTrussCuttingButton4(index) {
+    this.state.radioTrussCuttingItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioTrussCuttingItems4[index].selected = true;
+
+    this.setState(
+      {radioTrussCuttingItems4: this.state.radioTrussCuttingItems4},
+      () => {
+        this.setState({
+          trussCuttingOption4: this.state.radioTrussCuttingItems4[index].label,
+        });
+      },
+    );
+  }
+
+  //DENSITY
+
+  changeActiveRadioDensityButton1(index) {
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems1[index].selected = true;
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton2(index) {
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems2[index].selected = true;
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton3(index) {
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems3[index].selected = true;
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton4(index) {
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems4[index].selected = true;
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[index].label,
       });
     });
   }
@@ -1204,6 +1470,114 @@ export default class RepQualityActivity extends React.Component {
     });
     //END
 
+    //TRUSS CUTTING 1
+    this.state.radioTrussCuttingItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems1: this.state.radioTrussCuttingItems1},
+      () => {
+        this.setState({
+          trussCuttingOption1: this.state.radioTrussCuttingItems1[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 2
+    this.state.radioTrussCuttingItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems2: this.state.radioTrussCuttingItems2},
+      () => {
+        this.setState({
+          trussCuttingOption2: this.state.radioTrussCuttingItems2[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 3
+    this.state.radioTrussCuttingItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems3: this.state.radioTrussCuttingItems3},
+      () => {
+        this.setState({
+          trussCuttingOption3: this.state.radioTrussCuttingItems3[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 4
+    this.state.radioTrussCuttingItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems4: this.state.radioTrussCuttingItems4},
+      () => {
+        this.setState({
+          trussCuttingOption4: this.state.radioTrussCuttingItems4[0].label,
+        });
+      },
+    );
+    //END
+
+    //DENSITY 1
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 2
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 3
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 4
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[0].label,
+      });
+    });
+    //END
+
     //PRUNING 1
     this.state.radioPruningItems1.map((item) => {
       item.selected = false;
@@ -1465,6 +1839,118 @@ export default class RepQualityActivity extends React.Component {
 
     this.setState({radioClippingItems4: this.state.radioClippingItems4}, () => {
       this.setState({clippingOption4: this.state.radioClippingItems4[0].label});
+    });
+    //END
+  };
+
+  clearTrussCuttingRadio = () => {
+    //TRUSS CUTTING 1
+    this.state.radioTrussCuttingItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems1: this.state.radioTrussCuttingItems1},
+      () => {
+        this.setState({
+          trussCuttingOption1: this.state.radioTrussCuttingItems1[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 2
+    this.state.radioTrussCuttingItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems2: this.state.radioTrussCuttingItems2},
+      () => {
+        this.setState({
+          trussCuttingOption2: this.state.radioTrussCuttingItems2[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 3
+    this.state.radioTrussCuttingItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems3: this.state.radioTrussCuttingItems3},
+      () => {
+        this.setState({
+          trussCuttingOption3: this.state.radioTrussCuttingItems3[0].label,
+        });
+      },
+    );
+    //END
+
+    //TRUSS CUTTING 4
+    this.state.radioTrussCuttingItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState(
+      {radioTrussCuttingItems4: this.state.radioTrussCuttingItems4},
+      () => {
+        this.setState({
+          trussCuttingOption4: this.state.radioTrussCuttingItems4[0].label,
+        });
+      },
+    );
+    //END
+  };
+
+  clearDensityRadio = () => {
+    //DENSITY 1
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 2
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 3
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 4
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[0].label,
+      });
     });
     //END
   };
@@ -1789,7 +2275,19 @@ export default class RepQualityActivity extends React.Component {
               that.state.droppingOption1
             }&dropping_data2=${that.state.droppingOption2}&dropping_data3=${
               that.state.droppingOption3
-            }&dropping_data4=${that.state.droppingOption4}&quality_percent=${
+            }&dropping_data4=${that.state.droppingOption4}&trusscutting_data1=${
+              that.state.trussCuttingOption1
+            }&trusscutting_data2=${
+              that.state.trussCuttingOption2
+            }&trusscutting_data3=${
+              that.state.trussCuttingOption3
+            }&trusscutting_data4=${
+              that.state.trussCuttingOption4
+            }&density_data1=${that.state.densityOption1}&density_data2=${
+              that.state.densityOption2
+            }&density_data3=${that.state.densityOption3}&density_data4=${
+              that.state.densityOption4
+            }&quality_percent=${
               that.state.qualityPercentage
             }&general_comments=${that.state.comments}`;
 
@@ -1850,34 +2348,45 @@ export default class RepQualityActivity extends React.Component {
                 clippingOption2: '',
                 clippingOption3: '',
                 clippingOption4: '',
-          
+
                 droppingOption1: '',
                 droppingOption2: '',
                 droppingOption3: '',
                 droppingOption4: '',
-          
+
                 pruningOption1: '',
                 pruningOption2: '',
                 pruningOption3: '',
                 pruningOption4: '',
-          
+
                 twistingOption1: '',
                 twistingOption2: '',
                 twistingOption3: '',
                 twistingOption4: '',
-          
+
                 deleafingOption1: '',
                 deleafingOption2: '',
                 deleafingOption3: '',
                 deleafingOption4: '',
-          
+
                 pickingOption1: '',
                 pickingOption2: '',
                 pickingOption3: '',
                 pickingOption4: '',
-         
+
+                trussCuttingOption1: '',
+                trussCuttingOption2: '',
+                trussCuttingOption3: '',
+                trussCuttingOption4: '',
+
+                densityOption1: '',
+                densityOption2: '',
+                densityOption3: '',
+                densityOption4: '',
+
                 qualityPercentage: 0,
-              })
+                comments: '',
+              });
               this.props.navigation.navigate('RepQualityActivity');
               Toast.showWithGravity(
                 'Success!! \nDetails Added Successfully.',
@@ -1941,34 +2450,45 @@ export default class RepQualityActivity extends React.Component {
                 clippingOption2: '',
                 clippingOption3: '',
                 clippingOption4: '',
-          
+
                 droppingOption1: '',
                 droppingOption2: '',
                 droppingOption3: '',
                 droppingOption4: '',
-          
+
                 pruningOption1: '',
                 pruningOption2: '',
                 pruningOption3: '',
                 pruningOption4: '',
-          
+
                 twistingOption1: '',
                 twistingOption2: '',
                 twistingOption3: '',
                 twistingOption4: '',
-          
+
                 deleafingOption1: '',
                 deleafingOption2: '',
                 deleafingOption3: '',
                 deleafingOption4: '',
-          
+
                 pickingOption1: '',
                 pickingOption2: '',
                 pickingOption3: '',
                 pickingOption4: '',
-          
+
+                trussCuttingOption1: '',
+                trussCuttingOption2: '',
+                trussCuttingOption3: '',
+                trussCuttingOption4: '',
+
+                densityOption1: '',
+                densityOption2: '',
+                densityOption3: '',
+                densityOption4: '',
+
                 qualityPercentage: 0,
-              })
+                comments: '',
+              });
               this.props.navigation.navigate('RepQualityActivity');
 
               Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
@@ -2144,7 +2664,6 @@ export default class RepQualityActivity extends React.Component {
                   {label: 'Chris Norris', value: 'Chris Norris'},
                   {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
                   {label: 'Ben Smith', value: 'Ben Smith'},
-               
                 ]}
                 placeholder="SELECT"
                 containerStyle={{height: 50}}
@@ -2796,6 +3315,192 @@ export default class RepQualityActivity extends React.Component {
                     this,
                     key,
                   )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.direction}>
+              <Text style={styles.text}></Text>
+              <Text style={styles.text}>TRUSS CUTTING</Text>
+              <Text
+                style={styles.textClear}
+                onPress={this.clearTrussCuttingRadio}>
+                Clear
+              </Text>
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              1) Clean cuts and no stubs{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioTrussCuttingItems1.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioTrussCuttingButton1.bind(
+                    this,
+                    key,
+                  )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              2) No missing empty trusses{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioTrussCuttingItems2.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioTrussCuttingButton2.bind(
+                    this,
+                    key,
+                  )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              3) Dead plants/stems removed{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioTrussCuttingItems3.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioTrussCuttingButton3.bind(
+                    this,
+                    key,
+                  )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              4) No weeds in base of plants{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioTrussCuttingItems4.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioTrussCuttingButton4.bind(
+                    this,
+                    key,
+                  )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.direction}>
+              <Text style={styles.text}></Text>
+              <Text style={styles.text}>DENSITY</Text>
+              <Text style={styles.textClear} onPress={this.clearDensityRadio}>
+                Clear
+              </Text>
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              1) Less than 3 broken heads per row{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems1.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton1.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              2) Clip is applied above broken head to indicate to others{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems2.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton2.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              3) New bobbin is hung / or plant has been clipped to adjacent
+              bobbin <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems3.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton3.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              4) A lateral has been left to grow{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems4.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton4.bind(this, key)}
                 />
               ))}
             </View>

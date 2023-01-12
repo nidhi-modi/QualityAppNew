@@ -599,6 +599,70 @@ export default class HarQualityActivity extends React.Component {
         },
       ],
 
+      radioDensityItems1: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems2: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems3: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
+      radioDensityItems4: [
+        {
+          label: 'Pass',
+          size: 35,
+          color: 'green',
+          selected: false,
+        },
+
+        {
+          label: 'Fail',
+          size: 35,
+          color: 'red',
+          selected: false,
+        },
+      ],
+
       clippingOption1: '',
       clippingOption2: '',
       clippingOption3: '',
@@ -638,6 +702,11 @@ export default class HarQualityActivity extends React.Component {
       trussCuttingOption2: '',
       trussCuttingOption3: '',
       trussCuttingOption4: '',
+
+      densityOption1: '',
+      densityOption2: '',
+      densityOption3: '',
+      densityOption4: '',
 
       auditorsName: '',
       houseNumber: '',
@@ -857,6 +926,64 @@ export default class HarQualityActivity extends React.Component {
         });
       },
     );
+  }
+
+  //DENSITY
+
+  changeActiveRadioDensityButton1(index) {
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems1[index].selected = true;
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton2(index) {
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems2[index].selected = true;
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton3(index) {
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems3[index].selected = true;
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[index].label,
+      });
+    });
+  }
+
+  changeActiveRadioDensityButton4(index) {
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.state.radioDensityItems4[index].selected = true;
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[index].label,
+      });
+    });
   }
 
   //ARCHING
@@ -1585,6 +1712,54 @@ export default class HarQualityActivity extends React.Component {
     );
     //END
 
+    //DENSITY 1
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 2
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 3
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 4
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[0].label,
+      });
+    });
+    //END
+
     //TWISTING 1
     this.state.radioTwistingItems1.map((item) => {
       item.selected = false;
@@ -1909,6 +2084,56 @@ export default class HarQualityActivity extends React.Component {
         });
       },
     );
+    //END
+  };
+
+  clearDensityRadio = () => {
+    //DENSITY 1
+    this.state.radioDensityItems1.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems1: this.state.radioDensityItems1}, () => {
+      this.setState({
+        densityOption1: this.state.radioDensityItems1[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 2
+    this.state.radioDensityItems2.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems2: this.state.radioDensityItems2}, () => {
+      this.setState({
+        densityOption2: this.state.radioDensityItems2[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 3
+    this.state.radioDensityItems3.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems3: this.state.radioDensityItems3}, () => {
+      this.setState({
+        densityOption3: this.state.radioDensityItems3[0].label,
+      });
+    });
+    //END
+
+    //DENSITY 4
+    this.state.radioDensityItems4.map((item) => {
+      item.selected = false;
+    });
+
+    this.setState({radioDensityItems4: this.state.radioDensityItems4}, () => {
+      this.setState({
+        densityOption4: this.state.radioDensityItems4[0].label,
+      });
+    });
     //END
   };
 
@@ -2286,6 +2511,10 @@ export default class HarQualityActivity extends React.Component {
               that.state.trussCuttingOption3
             }&trusscutting_data4=${
               that.state.trussCuttingOption4
+            }&density_data1=${that.state.densityOption1}&density_data2=${
+              that.state.densityOption2
+            }&density_data3=${that.state.densityOption3}&density_data4=${
+              that.state.densityOption4
             }&quality_percent=${
               that.state.qualityPercentage
             }&general_comments=${that.state.comments}`;
@@ -2384,7 +2613,13 @@ export default class HarQualityActivity extends React.Component {
                 trussCuttingOption3: '',
                 trussCuttingOption4: '',
 
+                densityOption1: '',
+                densityOption2: '',
+                densityOption3: '',
+                densityOption4: '',
+
                 qualityPercentage: 0,
+                comments: '',
               });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.showWithGravity(
@@ -2487,7 +2722,13 @@ export default class HarQualityActivity extends React.Component {
                 trussCuttingOption3: '',
                 trussCuttingOption4: '',
 
+                densityOption1: '',
+                densityOption2: '',
+                densityOption3: '',
+                densityOption4: '',
+
                 qualityPercentage: 0,
+                comments: '',
               });
               this.props.navigation.navigate('HarQualityActivity');
               Toast.show('Success!! \nDetails Added Successfully.', Toast.LONG);
@@ -3501,6 +3742,92 @@ export default class HarQualityActivity extends React.Component {
                     this,
                     key,
                   )}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.direction}>
+              <Text style={styles.text}></Text>
+              <Text style={styles.text}>DENSITY</Text>
+              <Text style={styles.textClear} onPress={this.clearDensityRadio}>
+                Clear
+              </Text>
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              1) Less than 3 broken heads per row{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems1.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton1.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              2) Clip is applied above broken head to indicate to others{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems2.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton2.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              3) New bobbin is hung / or plant has been clipped to adjacent
+              bobbin <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems3.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton3.bind(this, key)}
+                />
+              ))}
+            </View>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <Text style={styles.titleHeading2Text}>
+              4) A lateral has been left to grow{' '}
+              <Text style={styles.redColor}>(0)</Text>{' '}
+            </Text>
+
+            <View style={styles.inBtnmarginDimension}></View>
+
+            <View style={styles.flexDirection}>
+              {this.state.radioDensityItems4.map((item, key) => (
+                <RadioButton
+                  key={key}
+                  button={item}
+                  onClick={this.changeActiveRadioDensityButton4.bind(this, key)}
                 />
               ))}
             </View>
