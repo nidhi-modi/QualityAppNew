@@ -2670,12 +2670,12 @@ export default class GerQualityActivity extends React.Component {
                 items={[
                   {label: 'Nick Wang', value: 'Nick Wang'},
                   {label: 'Nilesh Patel', value: 'Nilesh Patel'},
-                  {label: 'Anton Fernando', value: 'Anton Fernando'},
+                  {label: 'Sai Chandrasekar', value: 'Sai Chandrasekar'},
                   {
                     label: 'Dasharatha Weerakoon',
                     value: 'Dasharatha Weerakoon',
                   },
-                  {label: 'Chris Norris', value: 'Chris Norris'},
+                  {label: 'Andrew Hutchinson', value: 'Andrew Hutchinson'},
                   {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
                   {label: 'Ben Smith', value: 'Ben Smith'},
                 ]}

@@ -2660,7 +2660,7 @@ export default class OhaQualityActivity extends React.Component {
                 items={[
                   {label: 'Ravi Sarju', value: 'Ravi Sarju'},
                   {label: 'Davinash Naicker', value: 'Davinash Naicker'},
-                  {label: 'Chris Norris', value: 'Chris Norris'},
+                  {label: 'Andrew Hutchinson', value: 'Andrew Hutchinson'},
                   {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
                   {label: 'Ben Smith', value: 'Ben Smith'},
                 ]}

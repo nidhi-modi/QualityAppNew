@@ -2661,7 +2661,7 @@ export default class RepQualityActivity extends React.Component {
                 items={[
                   {label: 'Chris Cowie', value: 'Chris Cowie'},
                   {label: 'Colin Williams', value: 'Colin Williams'},
-                  {label: 'Chris Norris', value: 'Chris Norris'},
+                  {label: 'Andrew Hutchinson', value: 'Andrew Hutchinson'},
                   {label: 'Jeremy Whitten', value: 'Jeremy Whitten'},
                   {label: 'Ben Smith', value: 'Ben Smith'},
                 ]}
